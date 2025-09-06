@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@keyframes word-slide {
+  0% {
+    transform: translateY(60px) rotateX(90deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotateX(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-word-slide {
+  animation: word-slide 0.8s ease-out forwards;
+  animation-fill-mode: both;
+}
+
+
