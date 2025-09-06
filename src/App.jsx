@@ -16,7 +16,11 @@ const App = () => {
   return (
     <Router>
       <Navbar />
+<<<<<<< HEAD
       <div className="p-0">
+=======
+      <div >
+>>>>>>> origin/Home
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Aboutus />} />

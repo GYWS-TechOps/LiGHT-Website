@@ -1,10 +1,21 @@
 import React from 'react'
+import Hero from '../components/Home/Hero'
+import Mission from '../components/Home/Mission'
+import Reach from '../components/Home/Reach'
+import Events from '../components/Home/Events' 
+import Media from '../components/Home/Media'
+import ToTopButton from '../components/Home/ToTopButton'
+
 
 const Home = () => {
   return (
     <div>
-        Home Page
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio porro harum explicabo blanditiis atque, hic perferendis obcaecati numquam facere libero unde quo veritatis, maxime voluptates nobis ducimus ratione quis laborum. Commodi, aliquid dignissimos? Amet officia rerum, et impedit, delectus in architecto iure recusandae, ipsam corrupti autem. Animi tempore veniam eaque aspernatur, et veritatis tenetur ad nisi?
+      <Hero />
+      <Mission />
+      <Reach />
+      <Events/>
+      <Media/>
+      <ToTopButton />
     </div>
   )
 }
