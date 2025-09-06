@@ -136,7 +136,7 @@ const Hero = () => {
       {/* Navigation Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl
+        className="absolute left-4 top-1/2 -translate-y-1/2 text-white text-4xl cursor-pointer
                    hover:text-[rgb(230,197,37)] transition-colors duration-300 z-20"
         aria-label="Previous slide"
       >
@@ -145,7 +145,7 @@ const Hero = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl
+        className="absolute right-4 top-1/2 -translate-y-1/2 text-white text-4xl cursor-pointer
                    hover:text-[rgb(230,197,37)] transition-colors duration-300 z-20"
         aria-label="Next slide"
       >
