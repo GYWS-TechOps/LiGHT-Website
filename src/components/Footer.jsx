@@ -4,7 +4,7 @@ import Facebook from '../assets/Facebook.svg';
 import Insta from '../assets/Insta.svg';
 import LinkedIn from '../assets/LinkedIn.svg';
 import Twitter from '../assets/Twitter.svg';
-import Logo from '../assets/Logo.png';
+import Logo from '../assets/Logo.jpg';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
@@ -18,7 +18,7 @@ const Footer = () => {
                     <img
                         src={Logo}
                         alt="Logo"
-                        className="w-14 h-14 mb-4"
+                        className="w-14 h-14 mb-4 rounded-full"
                     />
                     <p className="text-sm leading-relaxed">
                         LiGHT is an initiative of one of India's largest student-run government registered NGO
