@@ -10,7 +10,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 3rem 4rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 50%, #dc2626 100%);
   color: white;
   position: relative;
   overflow: hidden;
@@ -36,7 +36,7 @@
   margin: 0 0 0.8rem 0;
   font-size: 3rem;
   font-weight: 700;
-  background: linear-gradient(45deg, #ffffff, #f0f8ff);
+  background: linear-gradient(45deg, #ffffff, #fed7aa);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -110,20 +110,20 @@
 
 .map-header {
   padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  border-bottom: 1px solid #e2e8f0;
+  background: linear-gradient(135deg, #fed7aa 0%, #fb923c 100%);
+  border-bottom: 1px solid #f97316;
 }
 
 .map-header h2 {
   margin: 0 0 0.3rem 0;
   font-size: 1.4rem;
-  color: #1e293b;
+  color: #9a3412;
   font-weight: 600;
 }
 
 .map-header p {
   margin: 0;
-  color: #64748b;
+  color: #c2410c;
   font-size: 0.95rem;
 }
 
@@ -144,7 +144,7 @@
 
 .popup-content h3 {
   margin: 0 0 0.5rem 0;
-  color: #667eea;
+  color: #ea580c;
   font-size: 1.1rem;
   font-weight: 600;
 }
@@ -178,7 +178,7 @@
 
 .panel-header {
   padding: 1.5rem 2rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: white;
 }
 
@@ -208,8 +208,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: #dcfce7;
-  color: #166534;
+  background: #fed7aa;
+  color: #9a3412;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.8rem;
@@ -220,14 +220,14 @@
 .badge-dot {
   width: 8px;
   height: 8px;
-  background: #22c55e;
+  background: #f97316;
   border-radius: 50%;
 }
 
 .center-details h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
-  color: #1e293b;
+  color: #ea580c;
   font-weight: 700;
 }
 
@@ -240,7 +240,7 @@
 .center-description h4 {
   margin: 0 0 0.8rem 0;
   font-size: 1.1rem;
-  color: #374151;
+  color: #c2410c;
   font-weight: 600;
 }
 
@@ -253,7 +253,7 @@
 
 .clear-selection {
   margin-top: 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #fb923c 0%, #f97316 100%);
   color: white;
   border: none;
   padding: 0.75rem 1.5rem;
@@ -266,7 +266,7 @@
 
 .clear-selection:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.4);
 }
 
 .placeholder {
@@ -292,7 +292,7 @@
   text-align: left;
   margin: 0 0 1rem 0;
   font-size: 1rem;
-  color: #374151;
+  color: #c2410c;
   font-weight: 600;
 }
 
@@ -303,8 +303,8 @@
   width: 100%;
   padding: 0.8rem 1rem;
   margin-bottom: 0.5rem;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #fff7ed;
+  border: 1px solid #fed7aa;
   border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -312,7 +312,7 @@
 }
 
 .center-item:hover {
-  background: #667eea;
+  background: #f97316;
   color: white;
   transform: translateX(5px);
 }
@@ -324,7 +324,7 @@
 
 .center-state-small {
   font-size: 0.8rem;
-  color: #64748b;
+  color: #ea580c;
 }
 
 .center-item:hover .center-state-small {
