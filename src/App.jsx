@@ -16,7 +16,7 @@ const App = () => {
   return (
     <Router>
       <Navbar />
-      <div className="p-4">
+      <div className="p-0">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Aboutus />} />
