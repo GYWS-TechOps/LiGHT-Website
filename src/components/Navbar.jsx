@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images.jpeg";
-
+import logo from "../assets/Home/logo.png";
 const Navbar = () => {
   return (
     <nav className="bg-gray-900 text-white shadow-md">

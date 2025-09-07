@@ -1,43 +1,34 @@
-import React from "react";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import React from 'react';
+import FacebookIcon from '../assets/Facebook.svg';
+import LinkedInIcon from '../assets/LinkedIn.svg';
 
 const MemberCard = ({ name, role, image, facebook, linkedin }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden w-72 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-      {/* Member Image */}
-      <div className="w-full h-72 overflow-hidden">
-        <img
-          src={image}
+    <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+      {/* Image Section */}
+      <div className="relative">
+        <img 
+          src={image} 
           alt={name}
-          className="w-full h-full object-cover"
+          className="w-full h-64 object-cover"
         />
       </div>
-
-      {/* Member Info */}
-      <div className="p-5 text-center bg-yellow-200">
-        <h3 className="text-lg font-bold text-gray-900">{name}</h3>
-        <p className="text-sm text-gray-700 mb-3">{role}</p>
-
-        {/* Social Links */}
-        <div className="flex justify-center gap-4">
+      
+      {/* Content Section */}
+      <div className="p-4">
+        <h3 className="text-xl font-semibold text-gray-800 mb-1">{name}</h3>
+        <p className="text-gray-600 mb-3">{role}</p>
+        
+        {/* Social Media Links */}
+        <div className="flex space-x-3">
           {facebook && (
-            <a
-              href={facebook}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-blue-600 transition"
-            >
-              <FaFacebook size={20} />
+            <a href={facebook} target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
+              <img src={FacebookIcon} alt="Facebook" className="w-6 h-6" />
             </a>
           )}
           {linkedin && (
-            <a
-              href={linkedin}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-700 hover:text-blue-800 transition"
-            >
-              <FaLinkedin size={20} />
+            <a href={linkedin} target="_blank" rel="noopener noreferrer" className="hover:opacity-75">
+              <img src={LinkedInIcon} alt="LinkedIn" className="w-6 h-6" />
             </a>
           )}
         </div>
@@ -47,6 +38,3 @@ const MemberCard = ({ name, role, image, facebook, linkedin }) => {
 };
 
 export default MemberCard;
-
-
-
