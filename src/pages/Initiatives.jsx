@@ -22,7 +22,7 @@ function Initiatives() {
         "NUMBER OF TEACHERS ATTENDED : 40+",
         "TOTAL BENEFICIARIES INCLUDING STUDENTS : 70+",
       ],
-      img: "public/initiativeimages/sindrievent.jpg",
+      img: "/initiativeimages/sindrievent.jpg",
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ function Initiatives() {
         "TOTAL NUMBER OF CHILDREN BENEFITED : 100+",
         "TOTAL FUNDS RAISED IN THE EVENT : 6771",
       ],
-      img: "public/initiativeimages/raipurevent.jpg",
+      img: "/initiativeimages/raipurevent.jpg",
     },
     {
       id: 3,
@@ -44,7 +44,7 @@ function Initiatives() {
         "TOTAL NUMBER OF CHILDREN BENEFITED : 500+",
         "TOTAL FUNDS RAISED IN THE EVENT : 8,125",
       ],
-      img: "public/initiativeimages/akolaevent.jpg",
+      img: "/initiativeimages/akolaevent.jpg",
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ function Initiatives() {
         "NO OF VOLUNTEERS WHO PARTICIPATED IN THE DRIVE: 150+",
         "NO OF REGIONS COVERED IN THE EVENT: 11+",
       ],
-      img: "public/initiativeimages/Wardha ppt.jpg",
+      img: "/initiativeimages/Wardha ppt.jpg",
     },
     {
       id: 5,
@@ -66,26 +66,26 @@ function Initiatives() {
         "TOTAL NUMBER OF CHILDREN BENEFITED : 25",
         "TOTAL FUNDS RAISED IN THE EVENT : 12,500",
       ],
-      img: "public/initiativeimages/samvedna event.jpg",
+      img: "/initiativeimages/samvedna event.jpg",
     },
   ];
 
   const awards = [
-    { id: 1, img: "public/initiativeimages/5. Innovative Centre _ LiGHT Samvedna.png", title: "Most Innovative event", subtitle: "" },
-    { id: 2, img: "public/initiativeimages/1. Impactful_ LiGHT Samvedna.png", title: "Most Impactful Centre", subtitle: "" },
-    { id: 3, img: "public/initiativeimages/4. Emerging Centre _ LiGHT Akola.png", title: "Emerging Centre of the Year", subtitle: "" },
-    { id: 4, img: "public/initiativeimages/3. Most Events Conducted_ LiGHT Wardha.png", title: "Most Events Conducted", subtitle: "" },
-    { id: 5, img: "public/initiativeimages/6. Promising Centres.png", title: "Most Promising Centre", subtitle: "" },
+    { id: 1, img: "/initiativeimages/5. Innovative Centre _ LiGHT Samvedna.png", title: "Most Innovative event", subtitle: "" },
+    { id: 2, img: "/initiativeimages/1. Impactful_ LiGHT Samvedna.png", title: "Most Impactful Centre", subtitle: "" },
+    { id: 3, img: "/initiativeimages/4. Emerging Centre _ LiGHT Akola.png", title: "Emerging Centre of the Year", subtitle: "" },
+    { id: 4, img: "/initiativeimages/3. Most Events Conducted_ LiGHT Wardha.png", title: "Most Events Conducted", subtitle: "" },
+    { id: 5, img: "/initiativeimages/6. Promising Centres.png", title: "Most Promising Centre", subtitle: "" },
   ];
 
   const samavesh = [
-    { id: 1, img: "public/initiativeimages/samavesh0.jpg", title: "Annual Meet 2022", subtitle: "" },
-    { id: 2, img: "public/initiativeimages/samavesh1.jpg", title: "Annual Meet 2022", subtitle: "" },
-    { id: 3, img: "public/initiativeimages/samavesh2.jpg", title: "Annual Meet 2022", subtitle: "" },
-    { id: 4, img: "public/initiativeimages/samavesh3.jpg", title: "Annual Meet 2022", subtitle: "" },
-    { id: 5, img: "public/initiativeimages/samavesh4.jpg", title: "Annual Meet 2022", subtitle: "" },
-    { id: 6, img: "public/initiativeimages/samavesh5.jpg", title: "Annual Meet 2022", subtitle: "" },
-    { id: 7, img: "public/initiativeimages/samavesh6.jpg", title: "Annual Meet 2022", subtitle: "" },
+    { id: 1, img: "/initiativeimages/samavesh0.jpg", title: "Annual Meet 2022", subtitle: "" },
+    { id: 2, img: "/initiativeimages/samavesh1.jpg", title: "Annual Meet 2022", subtitle: "" },
+    { id: 3, img: "/initiativeimages/samavesh2.jpg", title: "Annual Meet 2022", subtitle: "" },
+    { id: 4, img: "/initiativeimages/samavesh3.jpg", title: "Annual Meet 2022", subtitle: "" },
+    { id: 5, img: "/initiativeimages/samavesh4.jpg", title: "Annual Meet 2022", subtitle: "" },
+    { id: 6, img: "/initiativeimages/samavesh5.jpg", title: "Annual Meet 2022", subtitle: "" },
+    { id: 7, img: "/initiativeimages/samavesh6.jpg", title: "Annual Meet 2022", subtitle: "" },
   ];
 
   return (
