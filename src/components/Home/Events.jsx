@@ -70,7 +70,7 @@ const Reach = () => {
             href="/initiatives"
             className="inline-block  px-2 py-1 text-lg text-white bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
           >
-            View More
+            View More Events
           </a>
       </div>
 
