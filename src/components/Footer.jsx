@@ -44,17 +44,19 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
-                    <ul className="space-y-2 text-sm">
-                        <li><a href="#" className="hover:text-yellow-400">Home</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">About Us</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Initiatives</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Media</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Members</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Gallery</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Contact Us</a></li>
-                    </ul>
-                </div>
+    <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
+    <ul className="space-y-2 text-sm">
+        <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
+        <li><Link to="/about" className="hover:text-yellow-400">About Us</Link></li>
+        <li><Link to="/initiatives" className="hover:text-yellow-400">Initiatives</Link></li>
+        <li><Link to="/media" className="hover:text-yellow-400">Media</Link></li>
+        <li><Link to="/members" className="hover:text-yellow-400">Members</Link></li>
+        <li><Link to="/gallery" className="hover:text-yellow-400">Gallery</Link></li>
+        <li><Link to="/contact" className="hover:text-yellow-400">Contact Us</Link></li>
+         <li><Link to="/join" className="hover:text-yellow-400">Join Us</Link></li> {/* Add this line */}
+
+    </ul>
+</div>
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                     <ul className="space-y-3 text-sm">
@@ -82,9 +84,9 @@ const Footer = () => {
                     
                 </p>
                 <div className="flex gap-6 mt-2 md:mt-0">
-                    <a href="#" className="hover:text-yellow-400">Privacy Policy</a>
-                    <a href="#" className="hover:text-yellow-400">Terms & Conditions</a>
-                </div>
+    <Link to="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</Link>
+    <Link to="/terms" className="hover:text-yellow-400">Terms & Conditions</Link>
+</div>
             </div>
         </footer>
 
