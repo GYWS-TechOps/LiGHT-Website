@@ -106,9 +106,9 @@ function Initiatives() {
           {data.map((e) => (
             <div
               key={e.id}
-              className="w-full md:w-1/2 flex-shrink-0 border border-gray-200 rounded-lg p-3 bg-white shadow-md hover:shadow-lg transition"
+              className="w-full md:w-1/3 lg:w-1/3 flex-shrink-0 border-4 border-yellow-500 rounded-xl bg-white p-2 shadow-md hover:shadow-lg transition"
             >
-              {/* FILL WITHOUT DISTORTION LOOK (CROPS IF NEEDED) */}
+              {/* Landscape aspect to avoid "khinch" */}
               <div className="w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-lg">
                 <img
                   src={e.img}
@@ -118,7 +118,7 @@ function Initiatives() {
                 />
               </div>
 
-              <div className="mt-3">
+              <div className="mt-3 text-left">
                 <h2 className="text-md font-semibold mb-1">{e.title}</h2>
                 {e.details?.map((d, i) => (
                   <p key={i} className="text-xs text-gray-800 mb-1">
@@ -160,19 +160,26 @@ function Initiatives() {
           </button>
 
           <div ref={awardRef} className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12">
-            {awards.map((a) => (
-              <div
-                key={a.id}
-                className="w-full md:w-1/2 flex-shrink-0 border rounded-lg shadow-md bg-white p-3 text-center"
-              >
-                <div className="w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-lg mb-2">
-                  <img src={a.img} alt={a.title} className="w-full h-full object-cover object-center" />
-                </div>
-                <h3 className="text-md font-semibold">{a.title}</h3>
-                <p className="text-xs text-gray-600">{a.subtitle}</p>
-              </div>
-            ))}
-          </div>
+  {awards.map((a) => (
+    <div
+      key={a.id}
+      className="w-full md:w-1/3 lg:w-1/3 flex-shrink-0 border-4 border-yellow-500 rounded-xl bg-white p-1 shadow-md hover:shadow-lg transition text-center"
+    >
+      {/* Award Image */}
+      <div className="relative w-full aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg mb-2 bg-white">
+        <img
+          src={a.img}
+          alt={a.title}
+          className="w-full h-full object-contain"
+          loading="lazy"
+        />
+      </div>
+      <h3 className="text-sm font-semibold">{a.title}</h3>
+      <p className="text-xs text-gray-600">{a.subtitle}</p>
+    </div>
+  ))}
+</div>
+
 
           <button
             onClick={() => scroll(awardRef, "r")}
@@ -202,20 +209,27 @@ function Initiatives() {
             ‹
           </button>
 
-          <div ref={samaRef} className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12">
-            {samavesh.map((s) => (
-              <div
-                key={s.id}
-                className="w-full md:w-1/2 flex-shrink-0 border rounded-lg shadow-md bg-white p-3 text-center"
-              >
-                <div className="w-full aspect-[4/3] md:aspect-[16/9] overflow-hidden rounded-lg mb-2">
-                  <img src={s.img} alt={s.title} className="w-full h-full object-cover object-center" />
-                </div>
-                <h3 className="text-md font-semibold">{s.title}</h3>
-                <p className="text-xs text-gray-600">{s.subtitle}</p>
-              </div>
-            ))}
-          </div>
+        <div ref={samaRef} className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12">
+  {samavesh.map((s) => (
+    <div
+      key={s.id}
+      className="w-full md:w-1/3 lg:w-1/3 flex-shrink-0 border-4 border-yellow-500 rounded-xl bg-white p-1 shadow-md hover:shadow-lg transition text-center"
+    >
+      {/* Samavesh Image */}
+      <div className="relative w-full aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg mb-2 bg-white">
+        <img
+          src={s.img}
+          alt={s.title}
+          className="w-full h-full object-contain"
+          loading="lazy"
+        />
+      </div>
+      <h3 className="text-sm font-semibold">{s.title}</h3>
+      <p className="text-xs text-gray-600">{s.subtitle}</p>
+    </div>
+  ))}
+</div>
+
 
           <button
             onClick={() => scroll(samaRef, "r")}
