@@ -28,12 +28,8 @@ const Events = () => {
       </div>
       
       <div className="text-center mt-12">
-        <a 
-          href="/initiatives"
-          className="inline-block px-2 py-1 text-lg text-white bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
-        >
-          View More Events
-        </a>
+       
+        <a href="/initiatives" className="inline-block px-2 py-1 text-lg text-white bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105">Initiatives</a>
       </div>
     </section>
   );
