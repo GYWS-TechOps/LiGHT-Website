@@ -26,7 +26,7 @@ const Navbar = () => {
             <a href="/initiatives" className="hover:text-gray-300 transition">Initiatives</a>
             <a href="/join" className="hover:text-gray-300 transition">Join Us</a>
             <a href="/members" className="hover:text-gray-300 transition">Members</a>
-            <a href="https://www.gyws.org/donate" target="_blank" rel="noopener noreferrer" className="inline-block -mt-1 px-2 py-1 text-lg text-black bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105">
+            <a href="https://www.gyws.org/donate" target="_blank" rel="noopener noreferrer" className="inline-block -mt-0.5 px-2 pb-1 pt-0.1  text-lg text-black bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105">
               Donate Now
             </a>
           </div>
