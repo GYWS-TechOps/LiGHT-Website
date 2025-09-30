@@ -71,30 +71,30 @@ export default function Members() {
       <div className="absolute bottom-1/4 right-0 w-72 h-72 bg-gradient-to-l from-blue-200 to-indigo-200 rounded-full opacity-10 transform translate-x-32 -rotate-45"></div>
     </div>
 
-    {/* Banner Section with enhanced design */}
-    <div className="relative bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 overflow-hidden">
-      {/* Animated background pattern */}
-      <div className="absolute inset-0 bg-black opacity-40"></div>
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
-        <div className="absolute -top-16 -left-16 w-32 h-32 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-blue-400 rounded-full opacity-20 animate-bounce"></div>
-      </div>
-      
-      <div className="relative z-10 flex flex-col items-center justify-center text-white py-24 px-6">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 text-center bg-gradient-to-r from-white to-yellow-200 bg-clip-text text-transparent">
-          Our Amazing Team
-        </h1>
-        <div className="flex items-center gap-2 text-gray-200 text-lg">
-          <span className="hover:text-yellow-300 transition-colors cursor-pointer">Home</span>
-          <span>/</span>
-          <span className="text-yellow-300">All Members</span>
-        </div>
-        
-        {/* Decorative line */}
-        <div className="mt-6 w-32 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
-      </div>
+   {/* Banner Section with enhanced design */}
+<div className="relative bg-gradient-to-r from-gray-900 via-blue-900 to-gray-900 overflow-hidden">
+  {/* Animated background pattern */}
+  <div className="absolute inset-0 bg-black opacity-40"></div>
+  <div className="absolute inset-0">
+    <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-600/20 to-purple-600/20"></div>
+    <div className="absolute -top-16 -left-16 w-32 h-32 bg-yellow-400 rounded-full opacity-20 animate-pulse"></div>
+    <div className="absolute -bottom-8 -right-8 w-24 h-24 bg-blue-400 rounded-full opacity-20 animate-bounce"></div>
+  </div>
+  
+  <div className="relative z-10 flex flex-col items-center justify-center text-white py-24 px-6">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-center text-white leading-tight">
+      Our Amazing Team
+    </h1>
+    <div className="flex items-center gap-2 text-gray-200 text-lg">
+      <span className="hover:text-yellow-300 transition-colors cursor-pointer">Home</span>
+      <span>/</span>
+      <span className="text-yellow-300">All Members</span>
     </div>
+    
+    {/* Decorative line */}
+    <div className="mt-6 w-32 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></div>
+  </div>
+</div>
 
     {/* Intro Text Section with enhanced background */}
     <div className="relative py-20 px-6 md:px-20 bg-white/80 backdrop-blur-sm">

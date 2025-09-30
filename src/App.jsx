@@ -10,13 +10,14 @@ import Contactus from "./pages/Contactus";
 import Initiatives from "./pages/Initiatives";
 import JoinUs from "./pages/JoinUs";
 import Members from "./pages/Members";
+import Mediacoverage from "./pages/Mediacoverage"; // <-- import here
 import Footer from "./components/Footer";
 
 const App = () => {
   return (
     <Router>
       <Navbar />
-      <div >
+      <div>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<Aboutus />} />
@@ -25,6 +26,7 @@ const App = () => {
           <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/join" element={<JoinUs />} />
           <Route path="/members" element={<Members />} />
+          <Route path="/mediacoverage" element={<Mediacoverage />} /> {/* <-- add this */}
         </Routes>
       </div>
       <Footer/>
