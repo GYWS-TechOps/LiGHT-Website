@@ -1,56 +1,50 @@
 import React from "react";
 import MemberCard from "../components/MemberCard";
-import Advait from "../assets/Advait Gokhale.png";
-import Ayush from "../assets/AyushGurjar.jpg";
-import Megha from "../assets/MeghaSinghal.jpg";
-import Vidit from "../assets/ViditOm.jpg";
-import Samshritha from "../assets/SamshrithaBura.jpg";
+import Aaradhya from "../assets/Aaradhya.jpg";
+import Dishil from "../assets/Dishil.jpg";
+import Megha from "../assets/MeghaSinghal (2).jpg";
+import Thania from "../assets/Thania.jpg";
+import Vikash from "../assets/Vikash.jpg";
 import { Facebook, Linkedin } from "react-bootstrap-icons";
 
 export default function Members() {
   const members = [
     { 
-      name: "Advait Gokhale", 
+      name: "Megha Singhal",
       role: "Chief Executive Officer, LiGHT", 
-      image: Advait,
-      facebook: "https://www.facebook.com/profile.php?id=100074639880196",
-      linkedin:"https://www.linkedin.com/in/advait-gokhale-399a0b236/"
-    },
-    { 
-      name: "Megha Singhal", 
-      role: "LiGHT Head", 
       image: Megha,
       facebook: "https://www.facebook.com/megha.singhal.35325/",
       linkedin:"https://www.linkedin.com/in/megha-singhal-7a9a3926a/"
     },
     { 
-      name: "Ayush Gurjar", 
+      name: "Aaradhya Shukla", 
       role: "LiGHT Head", 
-      image: Ayush,
-      facebook: "https://light.gyws.org/members.php#",
-      linkedin:"https://www.linkedin.com/in/ayush0206"
+      image: Aaradhya,
+      facebook: "https://www.facebook.com/aaradhya1729/",
+      linkedin:"https://www.linkedin.com/in/aaradhya-shukla-205289280"
     },
     { 
-      name: "Samshritha Bura", 
+      name: "Zalavadiya Dishil", 
       role: "LiGHT Head", 
-      image: Samshritha,
-      facebook:"https://m.facebook.com/profile.php?id=100087910621138",
-      linkedin:"https://www.linkedin.com/in/samshritha-bura-116136258/"
+      image: Dishil,
+      facebook: "#",
+      linkedin:"https://www.linkedin.com/in/dishil-zalavadiya-943020280"
     },
     { 
-      name: "Vidit Om", 
+      name: "Thania Joshi", 
       role: "LiGHT Head", 
-      image: Vidit,
-      facebook:"https://www.facebook.com/people/Vidit-Om/pfbid02C29CxeZZA6F135ehhaPZjKZWUnEY2zwPi4uRhhFeEtpg7e8PBGCaAynvsEb8N4GYl/?sk=about",
-      linkedin:"https://www.linkedin.com/in/vidit-om-b11885256/"
+      image: Thania,
+      facebook:"#",
+      linkedin:"https://www.linkedin.com/in/thania-joshi-varanasi-733161333"
     },
     { 
-      name: "Saryu Gosika", 
+      name: "Vikash Siyak", 
       role: "LiGHT Head", 
-      image: "https://via.placeholder.com/200",
-      facebook:"https://light.gyws.org/members.php#",
-      linkedin:"https://light.gyws.org/members.php#"
+      image: Vikash,
+      facebook:"#",
+      linkedin:"https://www.linkedin.com/in/vikash-siyak-221697293"
     },
+   
   ];
 
  return (
@@ -115,60 +109,61 @@ export default function Members() {
       </div>
     </div>
 
-    {/* Members Section with glass morphism effect */}
-    <div className="relative py-20 px-4">
-      <div className="max-w-6xl mx-auto space-y-16">
-        {/* Section Title */}
-        <div className="text-center mb-16">
-          <h3 className="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4">
-            Meet Our Leaders
-          </h3>
-          <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full mx-auto"></div>
-        </div>
-
-        {/* Row 1 - CEO card with special styling */}
-        <div className="flex justify-center">
-          <div className="relative">
-            <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl opacity-20 blur-lg"></div>
-            <div className="relative">
-              <MemberCard {...members[0]} />
-            </div>
+     {/* Members Section with glass morphism effect */}
+      <div className="relative py-20 px-4">
+        <div className="max-w-6xl mx-auto space-y-16">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <h3 className="text-3xl font-bold bg-gradient-to-r from-gray-800 to-gray-600 bg-clip-text text-transparent mb-4">
+              Meet Our Leaders
+            </h3>
+            <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full mx-auto"></div>
           </div>
-        </div>
 
-        {/* Row 2 - 3 cards */}
-        <div className="flex justify-center gap-8 flex-wrap">
-          {members.slice(1, 4).map((member, index) => (
-            <div key={index} className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
-              <div className="relative">
-                <MemberCard {...member} />
-              </div>
-            </div>
-          ))}
-        </div>
 
-        {/* Row 3 - 2 cards */}
-        <div className="flex justify-center gap-8 flex-wrap">
-          {members.slice(4, 6).map((member, index) => (
-            <div key={index} className="relative group">
-              <div className="absolute -inset-2 bg-gradient-to-r from-green-400 to-blue-400 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
-              <div className="relative">
-                <MemberCard {...member} />
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-
-    {/* Bottom decorative wave */}
+{/* Row 1 - CEO card with special styling */}
+<div className="flex justify-center mb-16">
+  <div className="relative">
+    <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl opacity-20 blur-lg"></div>
     <div className="relative">
-      <svg className="w-full h-24 fill-current text-gray-100" viewBox="0 0 1200 120" preserveAspectRatio="none">
-        <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
-      </svg>
+      <MemberCard {...members[0]} />
     </div>
   </div>
-);
-}
+</div>
 
+{/* Row 2 - 2 cards */}
+<div className="flex justify-center gap-8 flex-wrap mb-16">
+  {members.slice(1, 3).map((member, index) => (
+    <div key={index} className="relative group">
+      <div className="absolute -inset-2 bg-gradient-to-r from-blue-400 to-purple-400 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+      <div className="relative">
+        <MemberCard {...member} />
+      </div>
+    </div>
+  ))}
+</div>
+
+{/* Row 3 - 2 cards */}
+<div className="flex justify-center gap-8 flex-wrap">
+  {members.slice(3, 5).map((member, index) => (
+    <div key={index} className="relative group">
+      <div className="absolute -inset-2 bg-gradient-to-r from-green-400 to-blue-400 rounded-2xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur"></div>
+      <div className="relative">
+        <MemberCard {...member} />
+      </div>
+    </div>
+  ))}
+</div>
+        </div>
+      </div>
+
+
+      {/* Bottom decorative wave */}
+      <div className="relative">
+        <svg className="w-full h-24 fill-current text-gray-100" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"></path>
+        </svg>
+      </div>
+    </div>
+  );
+}
