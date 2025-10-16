@@ -18,7 +18,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6">
             <a href="/" className="hover:text-gray-300 transition">Home</a>
             <a href="/about" className="hover:text-gray-300 transition">About Us</a>
             <a href="/centers" className="hover:text-gray-300 transition">Centers</a>
@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
 
           {/* Mobile Menu Button & Donate Button */}
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
              <a href="https://www.gyws.org/donate" target="_blank" rel="noopener noreferrer" className="inline-block -mt-1 px-2 pb-0.2 pt-0 text-lg text-black bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105">
               Donate
             </a>
@@ -62,7 +62,7 @@ const Navbar = () => {
       {/* Mobile Menu, show/hide based on menu state. */}
       {/* Added transition for a smooth slide-down effect */}
       <div
-        className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'}`}
+        className={`lg:hidden transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96' : 'max-h-0'}`}
         id="mobile-menu"
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">

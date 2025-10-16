@@ -64,9 +64,9 @@ const handleSubmit = async (e) => {
       </div>
 
       {/* Contact Form Card */}
-      <div className="flex justify-between p-8 bg-amber-50 rounded-xl shadow-md max-w-5xl mx-auto mt-8">
+      <div className="flex flex-col lg:flex-row justify-between p-8 bg-amber-50 rounded-xl shadow-md max-w-5xl mx-auto mt-8">
         {/* Left Side - Get in Touch */}
-        <div className="w-1/2 pr-6">
+        <div className="w-full lg:w-1/2 lg:pr-6 mb-6 lg:mb-0">
           <h2 className="text-lg font-bold mb-4">GET IN TOUCH</h2>
           <p className="text-gray-600 mb-2">
             Gopali (No-shooting Area), P.O. - Salua, Dist. - Paschim Medinipur,
@@ -77,17 +77,17 @@ const handleSubmit = async (e) => {
         </div>
 
         {/* Right Side - Query Form */}
-        <div className="w-1/2 pl-6">
+        <div className="w-full lg:w-1/2 lg:pl-6">
           <h2 className="text-lg font-bold mb-4">QUERY HERE</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="text"
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
               <input
                 type="email"
@@ -95,7 +95,7 @@ const handleSubmit = async (e) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
             </div>
             <textarea
@@ -106,15 +106,17 @@ const handleSubmit = async (e) => {
               required
               className="w-full p-3 border border-gray-300 rounded-lg h-28 focus:outline-none focus:ring-2 focus:ring-yellow-400"
             ></textarea>
-            <button
-              type="submit"
-              disabled={loading}
-              className={`bg-yellow-400 text-white px-6 py-3 rounded-lg hover:bg-yellow-500 transition ${
-                loading && "opacity-70 cursor-not-allowed"
-              }`}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
+            <div className="flex justify-center lg:justify-start">
+              <button
+                type="submit"
+                disabled={loading}
+                className={`bg-[rgb(240,210,55)] hover:bg-[rgb(200,167,20)] text-black px-6 py-3 rounded-lg transition ${
+                  loading && "opacity-70 cursor-not-allowed"
+                }`}
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </div>
           </form>
         </div>
       </div>

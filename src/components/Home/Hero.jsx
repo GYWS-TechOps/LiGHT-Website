@@ -152,18 +152,7 @@ const Hero = () => {
         &#8250;
       </button>
 
-      {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
-        {heroSections.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300
-              ${currentSlide === index ? 'bg-[rgb(230,197,37)] scale-110' : 'bg-white bg-opacity-50'}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      
     </div>
   );
 };

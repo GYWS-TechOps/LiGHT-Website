@@ -7,7 +7,7 @@ const Mission = () => {
   return (
     <section className='py-2 px-6 bg-gray-100 relative mt-[-12vh] max-w-[85vw] mx-auto z-10'>
       <div className='max-w-7xl mx-auto'>
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-gray-400'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-0  md:divide-x divide-gray-400'>
           
           {/* Our Mission */}
           <div className='text-center px-8 py-12 md:py-8'>
