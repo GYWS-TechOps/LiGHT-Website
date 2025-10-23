@@ -3,31 +3,33 @@ import { FaFacebook, FaLinkedin } from "react-icons/fa";
 
 const MemberCard = ({ name, role, image, facebook, linkedin }) => {
   return (
-    <div className="bg-white rounded-xl shadow-lg overflow-hidden w-72 transform transition duration-300 hover:scale-105 hover:shadow-2xl">
-      {/* Member Image */}
-      <div className="w-full h-72 overflow-hidden">
+    <div className="relative w-72 h-96 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0">
         <img
           src={image}
           alt={name}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
       </div>
 
-      {/* Member Info */}
-      <div className="p-5 text-center bg-yellow-200">
-        <h3 className="text-lg font-bold text-gray-900">{name}</h3>
-        <p className="text-sm text-gray-700 mb-3">{role}</p>
+      {/* Content - Positioned at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 text-white transform translate-y-0 group-hover:translate-y-0 transition-transform duration-300">
+        <h3 className="text-2xl font-bold mb-1">{name}</h3>
+        <p className="text-sm text-yellow-300 font-semibold mb-4">{role}</p>
 
         {/* Social Links */}
-        <div className="flex justify-center gap-4">
+        <div className="flex gap-4 items-center">
           {facebook && (
             <a
               href={facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-blue-600 transition"
+              className="bg-white/20 hover:bg-[rgb(230,197,37)] p-2 rounded-full transition-all duration-300 backdrop-blur-sm"
             >
-              <FaFacebook size={20} />
+              <FaFacebook size={18} className="text-white hover:text-gray-900" />
             </a>
           )}
           {linkedin && (
@@ -35,13 +37,16 @@ const MemberCard = ({ name, role, image, facebook, linkedin }) => {
               href={linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-blue-800 transition"
+              className="bg-white/20 hover:bg-[rgb(230,197,37)] p-2 rounded-full transition-all duration-300 backdrop-blur-sm"
             >
-              <FaLinkedin size={20} />
+              <FaLinkedin size={18} className="text-white hover:text-gray-900" />
             </a>
           )}
         </div>
       </div>
+
+      {/* Accent Line */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[rgb(230,197,37)] via-yellow-400 to-transparent"></div>
     </div>
   );
 };

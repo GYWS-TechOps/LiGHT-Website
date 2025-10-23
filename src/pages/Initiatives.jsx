@@ -1,15 +1,39 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 function Initiatives() {
   const sc = useRef();
   const awardRef = useRef();
   const samaRef = useRef();
 
+  // Touch swipe state
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
   // Scroll by the visible viewport width (=> 2 cards on md+, 1 on mobile)
   const scroll = (ref, d) => {
     if (!ref.current) return;
     const amt = ref.current.clientWidth;
     ref.current.scrollBy({ left: d === "l" ? -amt : amt, behavior: "smooth" });
+  };
+
+  // Touch handlers
+  const handleTouchStart = (e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = (ref, e) => {
+    setTouchEnd(e.changedTouches[0].clientX);
+    handleSwipe(ref);
+  };
+
+  const handleSwipe = (ref) => {
+    if (touchStart - touchEnd > 50) {
+      // Swiped left - scroll right
+      scroll(ref, "r");
+    } else if (touchEnd - touchStart > 50) {
+      // Swiped right - scroll left
+      scroll(ref, "l");
+    }
   };
 
   const data = [
@@ -96,13 +120,18 @@ function Initiatives() {
       <div className="relative">
         <button
           onClick={() => scroll(sc, "l")}
-          className="bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 z-10"
+          className="hidden md:block bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 z-10"
           aria-label="Scroll left"
         >
           ‹
         </button>
 
-        <div ref={sc} className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12">
+        <div 
+          ref={sc} 
+          className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12"
+          onTouchStart={handleTouchStart}
+          onTouchEnd={(e) => handleTouchEnd(sc, e)}
+        >
           {data.map((e) => (
             <div
               key={e.id}
@@ -134,7 +163,7 @@ function Initiatives() {
 
         <button
           onClick={() => scroll(sc, "r")}
-          className="bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 z-10"
+          className="hidden md:block bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 z-10"
           aria-label="Scroll right"
         >
           ›
@@ -153,37 +182,41 @@ function Initiatives() {
         <div className="relative">
           <button
             onClick={() => scroll(awardRef, "l")}
-            className="bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 z-10"
+            className="hidden md:block bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 z-10"
             aria-label="Scroll left"
           >
             ‹
           </button>
 
-          <div ref={awardRef} className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12">
-  {awards.map((a) => (
-    <div
-      key={a.id}
-      className="w-full md:w-1/3 lg:w-1/3 flex-shrink-0 border-4 border-yellow-500 rounded-xl bg-white p-1 shadow-md hover:shadow-lg transition text-center"
-    >
-      {/* Award Image */}
-      <div className="relative w-full aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg mb-2 bg-white">
-        <img
-          src={a.img}
-          alt={a.title}
-          className="w-full h-full object-contain"
-          loading="lazy"
-        />
-      </div>
-      <h3 className="text-sm font-semibold">{a.title}</h3>
-      <p className="text-xs text-gray-600">{a.subtitle}</p>
-    </div>
-  ))}
-</div>
-
+          <div 
+            ref={awardRef} 
+            className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={(e) => handleTouchEnd(awardRef, e)}
+          >
+            {awards.map((a) => (
+              <div
+                key={a.id}
+                className="w-full md:w-1/3 lg:w-1/3 flex-shrink-0 border-4 border-yellow-500 rounded-xl bg-white p-1 shadow-md hover:shadow-lg transition text-center"
+              >
+                {/* Award Image */}
+                <div className="relative w-full aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg mb-2 bg-white">
+                  <img
+                    src={a.img}
+                    alt={a.title}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-sm font-semibold">{a.title}</h3>
+                <p className="text-xs text-gray-600">{a.subtitle}</p>
+              </div>
+            ))}
+          </div>
 
           <button
             onClick={() => scroll(awardRef, "r")}
-            className="bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 z-10"
+            className="hidden md:block bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 z-10"
             aria-label="Scroll right"
           >
             ›
@@ -203,37 +236,41 @@ function Initiatives() {
         <div className="relative">
           <button
             onClick={() => scroll(samaRef, "l")}
-            className="bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 z-10"
+            className="hidden md:block bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -left-2 md:left-0 top-1/2 -translate-y-1/2 z-10"
             aria-label="Scroll left"
           >
             ‹
           </button>
 
-        <div ref={samaRef} className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12">
-  {samavesh.map((s) => (
-    <div
-      key={s.id}
-      className="w-full md:w-1/3 lg:w-1/3 flex-shrink-0 border-4 border-yellow-500 rounded-xl bg-white p-1 shadow-md hover:shadow-lg transition text-center"
-    >
-      {/* Samavesh Image */}
-      <div className="relative w-full aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg mb-2 bg-white">
-        <img
-          src={s.img}
-          alt={s.title}
-          className="w-full h-full object-contain"
-          loading="lazy"
-        />
-      </div>
-      <h3 className="text-sm font-semibold">{s.title}</h3>
-      <p className="text-xs text-gray-600">{s.subtitle}</p>
-    </div>
-  ))}
-</div>
-
+          <div 
+            ref={samaRef} 
+            className="flex overflow-x-hidden gap-5 scroll-smooth px-6 md:px-12"
+            onTouchStart={handleTouchStart}
+            onTouchEnd={(e) => handleTouchEnd(samaRef, e)}
+          >
+            {samavesh.map((s) => (
+              <div
+                key={s.id}
+                className="w-full md:w-1/3 lg:w-1/3 flex-shrink-0 border-4 border-yellow-500 rounded-xl bg-white p-1 shadow-md hover:shadow-lg transition text-center"
+              >
+                {/* Samavesh Image */}
+                <div className="relative w-full aspect-[16/10] md:aspect-[16/9] overflow-hidden rounded-lg mb-2 bg-white">
+                  <img
+                    src={s.img}
+                    alt={s.title}
+                    className="w-full h-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 className="text-sm font-semibold">{s.title}</h3>
+                <p className="text-xs text-gray-600">{s.subtitle}</p>
+              </div>
+            ))}
+          </div>
 
           <button
             onClick={() => scroll(samaRef, "r")}
-            className="bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 z-10"
+            className="hidden md:block bg-gray-800 text-white px-3 py-2 rounded text-lg hover:bg-gray-600 absolute -right-2 md:right-0 top-1/2 -translate-y-1/2 z-10"
             aria-label="Scroll right"
           >
             ›

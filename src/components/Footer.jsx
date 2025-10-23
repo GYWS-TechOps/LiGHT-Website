@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import Facebook from '../assets/Facebook.svg';
 import Insta from '../assets/Insta.svg';
 import LinkedIn from '../assets/LinkedIn.svg';
@@ -8,6 +8,12 @@ import Logo from '../assets/Logo.jpg';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
     return (
         <footer className="bg-[#1a1a1a] text-gray-300">
             {/* Main footer */}
@@ -43,20 +49,23 @@ const Footer = () => {
                         </a>
                     </div>
                 </div>
-                <div>
-    <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
-    <ul className="space-y-2 text-sm">
-        <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
-        <li><Link to="/about" className="hover:text-yellow-400">About Us</Link></li>
-        <li><Link to="/initiatives" className="hover:text-yellow-400">Initiatives</Link></li>
-        <li><Link to="/media" className="hover:text-yellow-400">Media</Link></li>
-        <li><Link to="/members" className="hover:text-yellow-400">Members</Link></li>
-        <li><Link to="/gallery" className="hover:text-yellow-400">Gallery</Link></li>
-        <li><Link to="/contact" className="hover:text-yellow-400">Contact Us</Link></li>
-         <li><Link to="/join" className="hover:text-yellow-400">Join Us</Link></li> {/* Add this line */}
 
-    </ul>
-</div>
+                {/* Useful Links */}
+                <div>
+                    <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
+                    <ul className="space-y-2 text-sm">
+                        <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
+                        <li><Link to="/about" className="hover:text-yellow-400">About Us</Link></li>
+                        <li><Link to="/initiatives" className="hover:text-yellow-400">Initiatives</Link></li>
+                        <li><Link to="/media" className="hover:text-yellow-400">Media</Link></li>
+                        <li><Link to="/members" className="hover:text-yellow-400">Members</Link></li>
+                        <li><Link to="/gallery" className="hover:text-yellow-400">Gallery</Link></li>
+                        <li><Link to="/contact" className="hover:text-yellow-400">Contact Us</Link></li>
+                        <li><Link to="/join" className="hover:text-yellow-400">Join Us</Link></li>
+                    </ul>
+                </div>
+
+                {/* Contact Section */}
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                     <ul className="space-y-3 text-sm">
@@ -80,16 +89,14 @@ const Footer = () => {
             {/* Bottom bar */}
             <div className="border-t border-gray-700 py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
                 <p>
-                    Copyright © {new Date().getFullYear()} GYWS. All rights reserved | Developed by Maggyan Solutions Pvt. Ltd.{" "}
-                    
+                    Copyright © {new Date().getFullYear()} GYWS. All rights reserved | Developed by Maggyan Solutions Pvt. Ltd.
                 </p>
                 <div className="flex gap-6 mt-2 md:mt-0">
-    <Link to="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</Link>
-    <Link to="/terms" className="hover:text-yellow-400">Terms & Conditions</Link>
-</div>
+                    <Link to="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</Link>
+                    <Link to="/terms" className="hover:text-yellow-400">Terms & Conditions</Link>
+                </div>
             </div>
         </footer>
-
     );
 };
 

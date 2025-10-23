@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import bgImage from "../components/Contactus/images.jpeg";
 
-const Contactus = () => {
+const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -39,10 +39,8 @@ const handleSubmit = async (e) => {
     <div>
       {/* Banner Section */}
       <div
-        className="relative bg-cover bg-center h-64 flex flex-col justify-center items-start px-12 text-white"
-  style={{
-    backgroundImage: `url(${bgImage})`,
-  }}
+        className="relative bg-cover bg-center h-64 flex flex-col justify-center items-start px-12 text-white bg-gray-800"
+
       >
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="relative z-10">
@@ -124,4 +122,4 @@ const handleSubmit = async (e) => {
   );
 };
 
-export default Contactus;
+export default ContactUs;
