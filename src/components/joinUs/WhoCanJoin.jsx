@@ -15,22 +15,34 @@ const WhoCanJoin = () => {
         <img src={joinIcon} alt="Join Icon" className="h-60 w-60" />
       </div>
 
-      <div className="flex flex-col md:flex-row justify-center gap-8">
-        <JoinCard
-          img={socialWorker}
-          title="Social Worker"
-          text="We always believe that building a forest is much better than building a tree, and so the social workers."
-        />
-        <JoinCard
-          img={student}
-          title="College Student"
-          text="College Students like Ram, who instead of blaming governments want..."
-        />
-        <JoinCard
-          img={professor}
-          title="College Professor"
-          text="If you are a College Professor who thinks that your students should get opportunity..."
-        />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="flex justify-center">
+          <div className="w-72">
+            <JoinCard
+              img={socialWorker}
+              title="Social Worker"
+              text="We always believe that building a forest is much better than building a tree, and so the social workers."
+            />
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="w-72">
+            <JoinCard
+              img={student}
+              title="College Student"
+              text="College Students like Ram, who instead of blaming governments want..."
+            />
+          </div>
+        </div>
+        <div className="flex justify-center">
+          <div className="w-72">
+            <JoinCard
+              img={professor}
+              title="College Professor"
+              text="If you are a College Professor who thinks that your students should get opportunity..."
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

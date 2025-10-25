@@ -7,7 +7,7 @@ import team from "../../assets/team.png";
 const HelpSection = () => {
   return (
     <div className="py-16 bg-white text-center">
-      <h2 className="text-4xl font-semibold text-gray-500 mb-4">
+      <h2 className="text-4xl font-semibold px-1 text-gray-500 mb-4">
         How we can help Ram?
       </h2>
       <div className="h-1 w-12 bg-yellow-400 mx-auto mb-10"></div>

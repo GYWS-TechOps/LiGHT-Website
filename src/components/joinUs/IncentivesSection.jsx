@@ -19,27 +19,27 @@ const Incentives = () => {
           <h2 className="text-3xl font-bold text-gray-500">
             Incentives
           </h2>
-          <div className="w-16 h-1 bg-[#FFD42D] mx-auto mt-2 rounded-full"></div>
+          <div className="w-16 h-1 bg-[rgb(254,218,41)]  mx-auto mt-2 rounded-full"></div>
         </div>
 
         {/* Content */}
         <div className="mt-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6 justify-items-center">
             {incentives.slice(0, 4).map((item, index) => (
               <div
                 key={index}
-                className={`${item.color} rounded-lg shadow-md h-28 w-64 flex items-center justify-center text-center px-4 font-semibold transition-transform duration-200 hover:scale-105 hover:shadow-xl cursor-pointer`}
+                className={`${item.color} rounded-lg shadow-md h-28 w-64 flex items-center justify-center text-center px-4 font-semibold transition-shadow duration-200 hover:shadow-xl cursor-pointer`}
               >
                 <span className="truncate w-full">{item.text}</span>
               </div>
             ))}
           </div>
 
-          <div className="flex justify-center gap-6 mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6 justify-items-center">
             {incentives.slice(4).map((item, index) => (
               <div
                 key={index}
-                className={`${item.color} rounded-lg shadow-md h-28 w-64 flex items-center justify-center text-center px-4 font-semibold transition-transform duration-200 hover:scale-105 hover:shadow-xl cursor-pointer`}
+                className={`${item.color} rounded-lg shadow-md h-28 w-64 flex items-center justify-center text-center px-4 font-semibold transition-shadow duration-200 hover:shadow-xl cursor-pointer`}
               >
                 <span className="whitespace-normal break-words w-full">{item.text}</span>
               </div>
