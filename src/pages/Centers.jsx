@@ -1,21 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import { centers } from "../data/centersData";
 import "leaflet/dist/leaflet.css";
-
-// Fix for default markers
 import L from "leaflet";
-import icon from "leaflet/dist/images/marker-icon.png";
-import iconShadow from "leaflet/dist/images/marker-shadow.png";
 
-let DefaultIcon = L.icon({
-  iconUrl: icon,
-  shadowUrl: iconShadow,
-  iconSize: [25, 41],
-  iconAnchor: [12, 41],
+// Create custom icon with orange color
+const customIcon = L.divIcon({
+  className: 'custom-marker',
+  html: `
+    <div style="position: relative;">
+      <svg width="24" height="36" viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 9.75 12 24 12 24s12-14.25 12-24c0-6.627-5.373-12-12-12z" 
+              fill="rgb(242,106,54)" 
+              stroke="rgb(180,60,30)" 
+              stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="4" fill="white"/>
+        <circle cx="12" cy="12" r="2" fill="rgb(180,60,30)"/>
+      </svg>
+    </div>
+  `,
+  iconSize: [24, 36],
+  iconAnchor: [12, 36],
+  popupAnchor: [0, -36]
 });
-
-L.Marker.prototype.options.icon = DefaultIcon;
 
 const indiaCenter = [20.5937, 78.9629];
 const indiaBounds = [
@@ -98,7 +105,8 @@ const Centers = () => {
                   {centers.map((center, idx) => (
                     <Marker 
                       key={idx} 
-                      position={[center.lat, center.lng]} 
+                      position={[center.lat, center.lng]}
+                      icon={customIcon}
                       eventHandlers={{ 
                         click: () => setActiveCenter(center),
                         mouseover: () => setHoveredCenter(center),
