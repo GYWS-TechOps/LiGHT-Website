@@ -24,6 +24,26 @@ const customIcon = L.divIcon({
   popupAnchor: [0, -36]
 });
 
+// Create custom icon with blue color for headquarters (Kharagpur)
+const headquartersIcon = L.divIcon({
+  className: 'custom-marker',
+  html: `
+    <div style="position: relative;">
+      <svg width="24" height="36" viewBox="0 0 24 36" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0C5.373 0 0 5.373 0 12c0 9.75 12 24 12 24s12-14.25 12-24c0-6.627-5.373-12-12-12z" 
+              fill="rgb(230,197,37)" 
+              stroke="rgb(30,60,180)" 
+              stroke-width="1.5"/>
+        <circle cx="12" cy="12" r="4" fill="white"/>
+        <circle cx="12" cy="12" r="2" fill="rgb(30,60,180)"/>
+      </svg>
+    </div>
+  `,
+  iconSize: [24, 36],
+  iconAnchor: [12, 36],
+  popupAnchor: [0, -36]
+});
+
 const indiaCenter = [20.5937, 78.9629];
 const indiaBounds = [
   [6.4627, 68.1097], // Southwest coordinates
@@ -106,7 +126,7 @@ const Centers = () => {
                     <Marker 
                       key={idx} 
                       position={[center.lat, center.lng]}
-                      icon={customIcon}
+                      icon={center.name === 'Kharagpur' ? headquartersIcon : customIcon}
                       eventHandlers={{ 
                         click: () => setActiveCenter(center),
                         mouseover: () => setHoveredCenter(center),
@@ -115,7 +135,7 @@ const Centers = () => {
                     >
                       <Popup>
                         <div className="p-2">
-                          <h3 className="font-bold text-lg text-gray-900 mb-1">{center.name}</h3>
+                          <h3 className="font-bold text-lg text-gray-900 mb-1">{center.name === 'Kharagpur' ? 'Headquarter' : center.name}</h3>
                           <p className="text-sm text-[rgb(230,197,37)] font-semibold mb-2">{center.state}</p>
                           <p className="text-sm text-gray-600">{center.description}</p>
                         </div>
@@ -131,10 +151,10 @@ const Centers = () => {
           <aside className="lg:col-span-1">
             <div className="bg-white rounded-lg shadow-md p-6 sticky top-6">
               <div className="mb-6">
-                <h2 className="text-2xl font-bold text-gray-900 mb-2">Center Details</h2>
+                <h2 className="text-2xl font-bold text-gray-900">{activeCenter && activeCenter.name === 'Kharagpur' ? 'Headquarter Details' : 'Center Details'}</h2>
                 {hoveredCenter && !activeCenter && (
                   <p className="text-sm text-[rgb(230,197,37)] font-semibold">
-                    Hovering: {hoveredCenter.name}
+                    Hovering: {hoveredCenter.name === 'Kharagpur' ? 'Headquarter' : hoveredCenter.name}
                   </p>
                 )}
               </div>
@@ -143,17 +163,17 @@ const Centers = () => {
                 <div className="space-y-4">
                   <div className="flex items-center gap-2 bg-green-50 text-green-700 px-3 py-2 rounded-lg">
                     <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                    <span className="text-sm font-semibold">Active Center</span>
+                    <span className="text-sm font-semibold">Active {activeCenter.name === 'Kharagpur' ? 'Headquarter' : 'Center'}</span>
                   </div>
                   
-                  <h3 className="text-xl font-bold text-gray-900">{activeCenter.name}</h3>
+                  <h3 className="text-xl font-bold text-gray-900">{activeCenter.name }</h3>
                   
                   <p className="text-gray-700">
                     <strong className="text-gray-900">📍 State:</strong> {activeCenter.state}
                   </p>
                   
                   <div className="bg-gray-50 rounded-lg p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">About this center</h4>
+                    <h4 className="font-semibold text-gray-900 mb-2">{activeCenter.name === 'Kharagpur' ? 'About LiGHT' : `About this center`}</h4>
                     <p className="text-sm text-gray-600 leading-relaxed">{activeCenter.description}</p>
                   </div>
                   
@@ -173,9 +193,25 @@ const Centers = () => {
                   </div>
                   
                   <div className="text-left">
+                    <h4 className="font-semibold text-gray-900 mb-3 text-center">Headquarter</h4>
+                    <div className="space-y-2">
+                      {centers.filter(center => center.name === 'Kharagpur').map((center, idx) => (
+                        <button
+                          key={idx}
+                          className="w-full text-left bg-gray-50 hover:bg-[rgb(230,197,37)] hover:text-gray-900 rounded-lg p-3 transition-all duration-300 group"
+                          onClick={() => setActiveCenter(center)}
+                        >
+                          <div className="font-semibold text-gray-900 group-hover:text-gray-900">{center.name}</div>
+                          <div className="text-xs text-gray-500 group-hover:text-gray-700 mt-1">{center.state}</div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="text-left">
                     <h4 className="font-semibold text-gray-900 mb-3 text-center">All Centers</h4>
                     <div className="space-y-2 max-h-96 overflow-y-auto">
-                      {centers.map((center, idx) => (
+                      {centers.filter(center => center.name !== 'Kharagpur').map((center, idx) => (
                         <button
                           key={idx}
                           className="w-full text-left bg-gray-50 hover:bg-[rgb(230,197,37)] hover:text-gray-900 rounded-lg p-3 transition-all duration-300 group"

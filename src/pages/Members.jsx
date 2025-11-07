@@ -1,50 +1,9 @@
 import React from "react";
-import MemberCard from "../components/MemberCard";
-import Aaradhya from "../assets/Aaradhya.jpg";
-import Dishil from "../assets/Dishil.jpg";
-import Megha from "../assets/MeghaSinghal (2).jpg";
-import Thania from "../assets/Thania.jpg";
-import Vikash from "../assets/Vikash.jpg";
+import MemberCard from "../components/Members/MemberCard";
+import SemsName from "../components/Members/SemsName";
+import { members } from "../data/members";
 
 export default function Members() {
-  const members = [
-    { 
-      name: "Megha Singhal",
-      role: "Chief Executive Officer, LiGHT", 
-      image: Megha,
-      facebook: "https://www.facebook.com/megha.singhal.35325/",
-      linkedin:"https://www.linkedin.com/in/megha-singhal-7a9a3926a/"
-    },
-    { 
-      name: "Aaradhya Shukla", 
-      role: "LiGHT Head", 
-      image: Aaradhya,
-      facebook: "https://www.facebook.com/aaradhya1729/",
-      linkedin:"https://www.linkedin.com/in/aaradhya-shukla-205289280"
-    },
-    { 
-      name: "Zalavadiya Dishil", 
-      role: "LiGHT Head", 
-      image: Dishil,
-      facebook: "#",
-      linkedin:"https://www.linkedin.com/in/dishil-zalavadiya-943020280"
-    },
-    { 
-      name: "Thania Joshi", 
-      role: "LiGHT Head", 
-      image: Thania,
-      facebook:"#",
-      linkedin:"https://www.linkedin.com/in/thania-joshi-varanasi-733161333"
-    },
-    { 
-      name: "Vikash Siyak", 
-      role: "LiGHT Head", 
-      image: Vikash,
-      facebook:"#",
-      linkedin:"https://www.linkedin.com/in/vikash-siyak-221697293"
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Banner Section */}
@@ -99,11 +58,20 @@ export default function Members() {
           </div>
 
           {/* Row 3 - 2 cards */}
-          <div className="flex justify-center gap-8 flex-wrap">
+          <div className="flex justify-center gap-8 flex-wrap mb-16">
             {members.slice(3, 5).map((member, index) => (
               <MemberCard key={index} {...member} />
             ))}
           </div>
+
+          {/* Sems Section */}
+          <div className="text-center mb-16">
+            <h3 className="text-3xl font-bold text-gray-800 mb-4">
+              Our Sems
+            </h3>
+            <div className="w-20 h-1 bg-[rgb(230,197,37)] rounded-full mx-auto mb-8"></div>
+          </div>
+          <SemsName />
         </div>
       </div>
     </div>

@@ -63,7 +63,7 @@ const CenterJourney = () => {
                 </div>
                 <div>
                   <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">{step.phase}</span>
-                  <span className="text-sm font-semibold text-gray-500 uppercase tracking-wider">{step.phase}</span>
+                 
                   <h3 className="text-2xl font-bold text-gray-800">{step.title}</h3>
                 </div>
               </div>

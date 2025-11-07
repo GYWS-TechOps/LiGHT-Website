@@ -5,9 +5,9 @@ const incentives = [
   { text: "NGO Work Experience", color: "bg-[#1A2930] text-white" },
   { text: "Guidance and Mentorship", color: "bg-[#1A2930] text-white" },
   { text: "Already established platform for team formation", color: "bg-[#1A2930] text-white" },
-  { text: "Skill Development", color: "bg-[#FFD42D] text-white" },
-  { text: "Can get a chance to visit IIT Kharagpur", color: "bg-[#FFD42D] text-white" },
-  { text: "Other Help", color: "bg-[#FFD42D] text-white" },
+  { text: "Skill Development", color: "bg-[#FFD42D] text-black" },
+  { text: "Can get a chance to visit IIT Kharagpur", color: "bg-[#FFD42D] text-black" },
+  { text: "Other Help", color: "bg-[#FFD42D] text-black" },
 ];
 
 const Incentives = () => {
@@ -19,7 +19,7 @@ const Incentives = () => {
           <h2 className="text-3xl font-bold text-gray-500">
             Incentives
           </h2>
-          <div className="w-16 h-1 bg-[rgb(254,218,41)]  mx-auto mt-2 rounded-full"></div>
+          <div className="w-16 h-1 bg-[rgb(247,218,71)]  mx-auto mt-2 rounded-full"></div>
         </div>
 
         {/* Content */}

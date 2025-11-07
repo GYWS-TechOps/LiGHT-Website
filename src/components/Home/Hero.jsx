@@ -113,7 +113,7 @@ const Hero = () => {
                 </h2>
 
                 {/* Description */}
-                <div className="text-xl text-orange-100 pb-3 max-w-4xl mx-auto">
+                <div className="text-xl text-orange-100 pb-3 max-w-4xl mx-auto px-2">
                   {section.description}
                 </div>
 
