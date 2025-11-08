@@ -1,4 +1,6 @@
 import React, { useRef, useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { eventsData } from "../data/eventsData";
 
 function Initiatives() {
   const sc = useRef();
@@ -47,63 +49,7 @@ function Initiatives() {
     }
   };
 
-  const data = [
-    {
-      id: 1,
-      title: "LiGHT Sindri Event",
-      desc:
-        "The event was based on Quality education and the strategies to tackle the challenges in current education system.",
-      details: [
-        "NUMBER OF TEACHERS ATTENDED : 40+",
-        "TOTAL BENEFICIARIES INCLUDING STUDENTS : 70+",
-      ],
-      img: "/initiativeimages/sindrievent.jpg",
-    },
-    {
-      id: 2,
-      title: "LiGHT Raipur Event",
-      desc:
-        "This event was conducted to raise money to donate water cooler and table fans to Kopal Vani Child Welfare Organisation in Raipur.",
-      details: [
-        "TOTAL NUMBER OF CHILDREN BENEFITED : 100+",
-        "TOTAL FUNDS RAISED IN THE EVENT : 6771",
-      ],
-      img: "/initiativeimages/raipurevent.jpg",
-    },
-    {
-      id: 3,
-      title: "LiGHT Akola Event",
-      desc:
-        "The event was conducted to raise money to provide a Volleyball court, and books for the library of a school named Dr. S R Patil School.",
-      details: [
-        "TOTAL NUMBER OF CHILDREN BENEFITED : 500+",
-        "TOTAL FUNDS RAISED IN THE EVENT : 8,125",
-      ],
-      img: "/initiativeimages/akolaevent.jpg",
-    },
-    {
-      id: 4,
-      title: "LiGHT Wardha Event",
-      desc:
-        "This event was conducted to raise funds to provide clean water facilities to children in Sankalp Orphanage in Wardha.",
-      details: [
-        "NO OF VOLUNTEERS WHO PARTICIPATED IN THE DRIVE: 150+",
-        "NO OF REGIONS COVERED IN THE EVENT: 11+",
-      ],
-      img: "/initiativeimages/Wardha ppt.jpg",
-    },
-    {
-      id: 5,
-      title: "LiGHT Samvedna Event",
-      desc:
-        "The program focused on providing school uniforms to the children of Bhagwaan Baba Balika Ashram Orphanage.",
-      details: [
-        "TOTAL NUMBER OF CHILDREN BENEFITED : 25",
-        "TOTAL FUNDS RAISED IN THE EVENT : 12,500",
-      ],
-      img: "/initiativeimages/samvedna event.jpg",
-    },
-  ];
+
 
   const awards = [
     { id: 1, img: "/initiativeimages/5. Innovative Centre _ LiGHT Samvedna.png", title: "Most Innovative event" },
@@ -132,10 +78,10 @@ function Initiatives() {
         <div className="relative px-0 md:px-12">
           <button
             onClick={() => scroll(sc, "l")}
-            className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 items-center justify-center"
             aria-label="Scroll left"
           >
-            ‹
+            <ChevronLeft size={20} />
           </button>
 
           <div 
@@ -144,7 +90,7 @@ function Initiatives() {
             onTouchStart={handleTouchStart}
             onTouchEnd={(e) => handleTouchEnd(sc, e)}
           >
-            {data.map((e) => (
+            {eventsData.map((e) => (
               <div
                 key={e.id}
                 className="card-item w-full md:w-[calc(33.333%-14px)] flex-shrink-0 snap-center md:snap-align-none"
@@ -152,7 +98,7 @@ function Initiatives() {
                 <div className="border-4 border-[rgb(230,197,37)] rounded-xl bg-white p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
                   <div className="w-full aspect-[16/10] overflow-hidden rounded-lg mb-4">
                     <img
-                      src={e.img}
+                      src={e.image}
                       alt={e.title}
                       className="w-full h-full object-cover"
                       loading="lazy"
@@ -161,13 +107,13 @@ function Initiatives() {
 
                   <div className="text-left">
                     <h2 className="text-xl font-bold mb-3 text-gray-800">{e.title}</h2>
-                    {e.details?.map((d, i) => (
+                    {e.metrics?.map((metric, i) => (
                       <p key={i} className="text-sm text-gray-700 mb-2 flex items-start">
                         <span className="mr-2 text-[rgb(230,197,37)] text-lg">✦</span>
-                        <span>{d}</span>
+                        <span>{metric.label}: {metric.value}</span>
                       </p>
                     ))}
-                    <p className="text-gray-600 text-sm mt-3 leading-relaxed">{e.desc}</p>
+                    <p className="text-gray-600 text-sm mt-3 leading-relaxed">{e.description}</p>
                   </div>
                 </div>
               </div>
@@ -176,10 +122,10 @@ function Initiatives() {
 
           <button
             onClick={() => scroll(sc, "r")}
-            className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 items-center justify-center"
             aria-label="Scroll right"
           >
-            ›
+            <ChevronRight size={20} />
           </button>
         </div>
       </div>
@@ -197,10 +143,10 @@ function Initiatives() {
           <div className="relative px-0 md:px-12">
             <button
               onClick={() => scroll(awardRef, "l")}
-              className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+              className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 items-center justify-center"
               aria-label="Scroll left"
             >
-              ‹
+              <ChevronLeft size={20} />
             </button>
 
             <div 
@@ -231,10 +177,10 @@ function Initiatives() {
 
             <button
               onClick={() => scroll(awardRef, "r")}
-              className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+              className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 items-center justify-center"
               aria-label="Scroll right"
             >
-              ›
+              <ChevronRight size={20} />
             </button>
           </div>
         </div>
@@ -252,13 +198,12 @@ function Initiatives() {
 
           <div className="relative px-0 md:px-12">
             <button
-              onClick={() => scroll(samaRef, "l")}
-              className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
-              aria-label="Scroll left"
-            >
-              ‹
-            </button>
-
+            onClick={() => scroll(sc, "l")}
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 items-center justify-center"
+            aria-label="Scroll left"
+          >
+            <ChevronLeft size={20} />
+          </button>
             <div 
               ref={samaRef} 
               className="flex overflow-x-hidden gap-5 scroll-smooth snap-x snap-mandatory md:snap-none"
@@ -287,10 +232,10 @@ function Initiatives() {
 
             <button
               onClick={() => scroll(samaRef, "r")}
-              className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 flex items-center justify-center"
+              className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 items-center justify-center"
               aria-label="Scroll right"
             >
-              ›
+              <ChevronRight size={20} />
             </button>
           </div>
         </div>

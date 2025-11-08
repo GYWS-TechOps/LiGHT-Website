@@ -1,15 +1,15 @@
 export const sems = [
-  "Parin Ranjan",
-  "Anshul",
+  "Anmol Kumar Sah",
+  "Anshul Goyal",
+  "Arush Arya",
+  "Gaurav Giri",
   "Gopanshu Garg",
-  "Sai Krushik Reddy Sammidi",
+  "Jaya Singh",
+  "Krish Khanna",
   "Kunal Asole",
   "Mohit Vyas",
-  "Jaya Singh",
-  "Anmol Kumar Sah",
+  "Parin Ranjan",
   "Premnadh Reddy",
-  "Arush Arya",
   "Puneet Kumar",
-  "Krish Khanna",
-  "Gaurav Giri"
+  "Sai Krushik Reddy Sammidi"
 ];

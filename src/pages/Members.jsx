@@ -67,7 +67,7 @@ export default function Members() {
           {/* Sems Section */}
           <div className="text-center mb-16">
             <h3 className="text-3xl font-bold text-gray-800 mb-4">
-              Our Sems
+              Our Senior Executive Members
             </h3>
             <div className="w-20 h-1 bg-[rgb(230,197,37)] rounded-full mx-auto mb-8"></div>
           </div>

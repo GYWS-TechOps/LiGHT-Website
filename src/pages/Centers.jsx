@@ -149,7 +149,7 @@ const Centers = () => {
           
           {/* Info Panel */}
           <aside className="lg:col-span-1">
-            <div className="bg-white rounded-lg shadow-md p-6 sticky top-6">
+            <div className="bg-white rounded-lg shadow-md p-6 sticky top-6 h-[500px] md:h-[600px] overflow-y-auto">
               <div className="mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">{activeCenter && activeCenter.name === 'Kharagpur' ? 'Headquarter Details' : 'Center Details'}</h2>
                 {hoveredCenter && !activeCenter && (
