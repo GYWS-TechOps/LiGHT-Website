@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { eventsData } from "../data/eventsData";
+import ToTopButton from "../components/ToTopButton";
 
 function Initiatives() {
   const sc = useRef();
@@ -240,6 +241,7 @@ function Initiatives() {
           </div>
         </div>
       </div>
+      <ToTopButton />
     </div>
   );
 }

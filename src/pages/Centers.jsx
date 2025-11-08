@@ -210,11 +210,11 @@ const Centers = () => {
                   
                   <div className="text-left">
                     <h4 className="font-semibold text-gray-900 mb-3 text-center">All Centers</h4>
-                    <div className="space-y-2 max-h-96 overflow-y-auto">
+                    <div className="flex flex-wrap justify-center gap-4 max-h-96 overflow-y-auto">
                       {centers.filter(center => center.name !== 'Kharagpur').map((center, idx) => (
                         <button
                           key={idx}
-                          className="w-full text-left bg-gray-50 hover:bg-[rgb(230,197,37)] hover:text-gray-900 rounded-lg p-3 transition-all duration-300 group"
+                          className="flex-shrink-0 w-64 text-left bg-gray-50 hover:bg-[rgb(230,197,37)] hover:text-gray-900 rounded-lg p-3 transition-all duration-300 group"
                           onClick={() => setActiveCenter(center)}
                         >
                           <div className="font-semibold text-gray-900 group-hover:text-gray-900">{center.name}</div>

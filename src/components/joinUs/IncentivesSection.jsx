@@ -35,7 +35,7 @@ const Incentives = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-6 justify-items-center">
+          <div className="flex flex-wrap justify-center gap-2">
             {incentives.slice(4).map((item, index) => (
               <div
                 key={index}

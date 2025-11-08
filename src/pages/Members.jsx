@@ -2,6 +2,7 @@ import React from "react";
 import MemberCard from "../components/Members/MemberCard";
 import SemsName from "../components/Members/SemsName";
 import { members } from "../data/members";
+import ToTopButton from "../components/ToTopButton";
 
 export default function Members() {
   return (
@@ -72,8 +73,10 @@ export default function Members() {
             <div className="w-20 h-1 bg-[rgb(230,197,37)] rounded-full mx-auto mb-8"></div>
           </div>
           <SemsName />
+          <ToTopButton />
         </div>
       </div>
     </div>
+    
   );
 }
