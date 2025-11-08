@@ -10,7 +10,7 @@ const ContactUs = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   setLoading(true);
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwTaGKvbNmaFeGKYeYbB9oDhyWshZd9K72waqiNKzscjRfD9JCqmg2MrwMRN2dpmUHCDQ/exec';
+  const scriptURL = import.meta.env.VITE_SCRIPT_URL;
 
   try {
     const response = await fetch(scriptURL, {
@@ -62,13 +62,13 @@ const handleSubmit = async (e) => {
       </div>
 
       {/* Contact Form Card */}
-      <div className="flex flex-col lg:flex-row justify-between p-8 bg-amber-50 rounded-xl shadow-md max-w-5xl mx-auto mt-8">
+      <div className="flex flex-col lg:flex-row justify-between p-8 bg-amber-50 rounded-xl shadow-md max-w-5xl mx-auto my-8">
         {/* Left Side - Get in Touch */}
         <div className="w-full lg:w-1/2 lg:pr-6 mb-6 lg:mb-0">
           <h2 className="text-lg font-bold mb-4">GET IN TOUCH</h2>
           <p className="text-gray-600 mb-2">
-            Gopali (No-shooting Area), P.O. - Salua, Dist. - Paschim Medinipur,
-            West Bengal, Pin-721145.
+            Jagriti Vidya Mandir, Hostel Vill. Tangasole,
+             P.O- Salua, P.S- Kharagpur (Local), Dist- Paschim Medinipur, Kharagpur, West-Bengal, Pin- 721145
           </p>
           <p className="text-gray-600 mb-2">📞 +91 9123192841 </p>
           <p className="text-gray-600">✉️ gywsociety@gmail.com</p>
