@@ -34,15 +34,24 @@ const Reach = () => {
             </div>
           </div>
           
-          {/* Active Members */}
-          <div className='text-center'>
-            <div className='text-5xl md:text-6xl font-semibold text-[rgb(230,197,37)] mb-2'>
-              <CountUp end={400} duration={4} enableScrollSpy scrollSpyOnce/>
-            </div>
-            <div className='text-lg text-gray-300'>
-              Active Members
-            </div>
-          </div>
+   {/* Active Members */}
+<div className='text-center'>
+  <div className='text-5xl md:text-6xl font-semibold text-[rgb(230,197,37)] mb-2'>
+    <CountUp 
+      end={400} 
+      duration={4} 
+      enableScrollSpy 
+      scrollSpyOnce 
+      onEnd={() => document.getElementById('plus-sign').style.opacity = 1} 
+    />
+    <span id="plus-sign" style={{ opacity: 0, transition: 'opacity 0.5s ease' }}>+</span>
+  </div>
+  <div className='text-lg text-gray-300'>
+    Active Members
+  </div>
+</div>
+
+
           
         </div>
       </div>

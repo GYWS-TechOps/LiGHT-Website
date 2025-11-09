@@ -20,7 +20,7 @@ const OurStory = () => {
     {
       year: '2022',
       title: 'Growth & Expansion',
-      description: 'Hosted the first fundraising and annual meet; network grew to 16 active centers.'
+      description: 'Hosted the first fundraising and annual meet; network grew to 10+ active centers.'
     },
     {
       year: '2023',

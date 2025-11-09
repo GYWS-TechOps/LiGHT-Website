@@ -1,5 +1,4 @@
 import React from "react";
-import diamond from "../../assets/diamond.png";
 
 const DifferenceSection = () => {
   return (
@@ -18,7 +17,7 @@ const DifferenceSection = () => {
           {/* Left: single image (contains all 4 diamonds) */}
           <div className="flex justify-center md:justify-start">
               <img
-                src={diamond}
+                src="/assets/icons/diamond.png"
                 alt="Difference icons"
                 className="w-48 h-48"
               />

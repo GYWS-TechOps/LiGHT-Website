@@ -199,7 +199,7 @@ function Initiatives() {
 
           <div className="relative px-0 md:px-12">
             <button
-            onClick={() => scroll(sc, "l")}
+            onClick={() => scroll(samaRef, "l")}
             className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-gray-800 hover:bg-gray-700 text-white w-10 h-10 rounded-full shadow-lg transition-all duration-300 items-center justify-center"
             aria-label="Scroll left"
           >

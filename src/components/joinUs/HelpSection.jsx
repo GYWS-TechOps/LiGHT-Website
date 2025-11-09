@@ -1,8 +1,5 @@
 import React from "react";
 import HelpCard from "./HelpCard";
-import platform from "../../assets/platform.png";
-import leader from "../../assets/leader.png";
-import team from "../../assets/team.png";
 
 const HelpSection = () => {
   return (
@@ -13,9 +10,9 @@ const HelpSection = () => {
       <div className="h-1 w-12 bg-yellow-400 mx-auto mb-10"></div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-        <HelpCard img={platform} text="1. By providing him a Platform where he can work with like-minded individuals." />
-        <HelpCard img={leader} text="2. By Bringing out the leader in him." />
-        <HelpCard img={team} text="3. To form a team and develop Team - bonding among his college mates." />
+        <HelpCard img="/assets/icons/platform.png" text="1. By providing him a Platform where he can work with like-minded individuals." />
+        <HelpCard img="/assets/icons/leader.png" text="2. By Bringing out the leader in him." />
+        <HelpCard img="/assets/icons/team.png" text="3. To form a team and develop Team - bonding among his college mates." />
       </div>
     </div>
   );
