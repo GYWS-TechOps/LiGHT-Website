@@ -1,8 +1,8 @@
 import React from 'react'
-import Content from '../components/AboutUs/Content'
-import OurStory from '../components/AboutUs/OurStory'
-import CenterJourney from '../components/AboutUs/CenterJourney'
-import ToTopButton from '../components/ToTopButton'
+import Content from '../components/AboutUs/Content.jsx'
+import OurStory from '../components/AboutUs/OurStory.jsx'
+import CenterJourney from '../components/AboutUs/CenterJourney.jsx'
+import ToTopButton from '../components/ToTopButton.jsx'
 
 const AboutUs = () => {
   return (
