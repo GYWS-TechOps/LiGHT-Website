@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import heroImg1 from '../../assets/Home/home-hero.jpg';
-import heroImg2 from '../../assets/Home/hero2.jpg';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,7 +6,7 @@ const Hero = () => {
 
   const heroSections = [
     {
-      backgroundImage: heroImg1,
+      backgroundImage: '/images/Home/home-hero.jpg',
       text: 'Bring LiGHT to your Campus',
       description:
         'Apply for a LiGHT Center in your college and empower your college students to be a Change Maker',
@@ -16,7 +14,7 @@ const Hero = () => {
       buttonLink: '/join',
     },
     {
-      backgroundImage: heroImg2,
+      backgroundImage: '/images/Home/hero2.jpg',
       textLine1: 'Together we',
       textLine2: 'can make a difference',
       description:

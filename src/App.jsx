@@ -10,7 +10,7 @@ import ContactUs from "./pages/ContactUs";
 import Initiatives from "./pages/Initiatives";
 import JoinUs from "./pages/JoinUs";
 import Members from "./pages/Members";
-import Mediacoverage from "./pages/Mediacoverage";
+import MediaCoverage from "./pages/MediaCoverage";
 import Gallery from "./pages/Gallery";
 import Footer from "./components/Footer";
 
@@ -27,7 +27,7 @@ const App = () => {
           <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/join" element={<JoinUs />} />
           <Route path="/members" element={<Members />} />
-          <Route path="/mediacoverage" element={<Mediacoverage />} />
+          <Route path="/mediacoverage" element={<MediaCoverage />} />
           <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </div>

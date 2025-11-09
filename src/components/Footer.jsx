@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import Logo from '../assets/Logo.jpg';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
@@ -18,7 +17,7 @@ const Footer = () => {
                 {/* About Section */}
                 <div>
                     <img
-                        src={Logo}
+                        src="/images/logos/Logo.jpg"
                         alt="Logo"
                         className="w-14 h-14 mb-4 rounded-full"
                     />

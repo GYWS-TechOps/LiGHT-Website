@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import bgImage from "../components/Contactus/images.jpeg";
 
 const ContactUs = () => {
   const [name, setName] = useState("");
@@ -70,8 +69,8 @@ const handleSubmit = async (e) => {
             Jagriti Vidya Mandir, Hostel Vill. Tangasole,
              P.O- Salua, P.S- Kharagpur (Local), Dist- Paschim Medinipur, Kharagpur, West-Bengal, Pin- 721145
           </p>
-          <p className="text-gray-600 mb-2">📞 +91 9123192841 </p>
-          <p className="text-gray-600">✉️ gywsociety@gmail.com</p>
+          <p className="text-gray-600 mb-2">📞 91+ 94147 29199 </p>
+          <p className="text-gray-600">✉️ light@gyws.org</p>
         </div>
 
         {/* Right Side - Query Form */}

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/Home/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +20,7 @@ const Navbar = () => {
           
           {/* Logo and Brand Name */}
           <div className="flex-shrink-0 flex items-center space-x-2">
-            <img src={logo} alt="LiGHT Logo" className="h-13 w-auto" />
+            <img src="/images/Home/logo.png" alt="LiGHT Logo" className="h-13 w-auto" />
             <Link to="/" className="text-2xl font-bold hidden sm:block hover:text-[rgb(230,197,37)] transition-colors duration-300">
               LiGHT
             </Link>

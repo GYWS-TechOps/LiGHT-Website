@@ -44,7 +44,7 @@ const headquartersIcon = L.divIcon({
   popupAnchor: [0, -36]
 });
 
-const indiaCenter = [20.5937, 78.9629];
+const indiaCenter = [24.5937, 78.9629]; // Moved center point up by ~2 degrees
 const indiaBounds = [
   [6.4627, 68.1097], // Southwest coordinates
   [35.5044, 97.3953], // Northeast coordinates
@@ -106,10 +106,10 @@ const Centers = () => {
                 <p className="text-gray-800 mt-1">Click on any marker to explore our centers</p>
               </div>
               
-              <div className="h-[500px] md:h-[600px]">
+              <div className="h-[500px] md:h-[600px] relative">
                 <MapContainer 
                   center={indiaCenter} 
-                  zoom={5} 
+                  zoom={4.5} 
                   scrollWheelZoom={true} 
                   style={{ height: "100%", width: "100%" }}
                   maxBounds={indiaBounds}
@@ -128,21 +128,30 @@ const Centers = () => {
                       position={[center.lat, center.lng]}
                       icon={center.name === 'Kharagpur' ? headquartersIcon : customIcon}
                       eventHandlers={{ 
-                        click: () => setActiveCenter(center),
-                        mouseover: () => setHoveredCenter(center),
-                        mouseout: () => setHoveredCenter(null)
+                        click: () => setActiveCenter(center)
                       }}
-                    >
-                      <Popup>
-                        <div className="p-2">
-                          <h3 className="font-bold text-lg text-gray-900 mb-1">{center.name === 'Kharagpur' ? 'Headquarter' : center.name}</h3>
-                          <p className="text-sm text-[rgb(230,197,37)] font-semibold mb-2">{center.state}</p>
-                          <p className="text-sm text-gray-600">{center.description}</p>
-                        </div>
-                      </Popup>
-                    </Marker>
+                    />
                   ))}
                 </MapContainer>
+                
+                {/* External Popup */}
+                {activeCenter && (
+                  <div className="absolute top-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border-l-4 border-[rgb(230,197,37)]">
+                    <div className="flex justify-between items-start mb-2">
+                      <h3 className="font-bold text-lg text-gray-900">
+                        {activeCenter.name}
+                      </h3>
+                      <button 
+                        onClick={() => setActiveCenter(null)}
+                        className="text-gray-400 hover:text-gray-600 ml-2"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                    <p className="text-sm text-[rgb(230,197,37)] font-semibold mb-2">{activeCenter.state}</p>
+                    <p className="text-sm text-gray-600">{activeCenter.description}</p>
+                  </div>
+                )}
               </div>
             </div>
           </section>
@@ -210,11 +219,11 @@ const Centers = () => {
                   
                   <div className="text-left">
                     <h4 className="font-semibold text-gray-900 mb-3 text-center">All Centers</h4>
-                    <div className="flex flex-wrap justify-center gap-4 max-h-96 overflow-y-auto">
+                    <div className="space-y-2">
                       {centers.filter(center => center.name !== 'Kharagpur').map((center, idx) => (
                         <button
                           key={idx}
-                          className="flex-shrink-0 w-64 text-left bg-gray-50 hover:bg-[rgb(230,197,37)] hover:text-gray-900 rounded-lg p-3 transition-all duration-300 group"
+                          className="w-full text-left bg-gray-50 hover:bg-[rgb(230,197,37)] hover:text-gray-900 rounded-lg p-3 transition-all duration-300 group"
                           onClick={() => setActiveCenter(center)}
                         >
                           <div className="font-semibold text-gray-900 group-hover:text-gray-900">{center.name}</div>

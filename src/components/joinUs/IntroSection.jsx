@@ -1,6 +1,4 @@
 import React from "react";
-import cover from "../../assets/cover.jpg";
-import ram1 from "../../assets/ram1.png";
 
 const IntroSection = () => {
   return (
@@ -9,7 +7,7 @@ const IntroSection = () => {
         {/* Left Box with Cover Image */}
         <div className="w-full md:w-1/2 flex items-center justify-center bg-black p-6">
           <img
-            src={cover}
+            src="/images/join us/cover.jpg"
             alt="Cover"
             className="h-64 md:h-70 w-56 md:w-60 object-cover"
           />
@@ -17,7 +15,7 @@ const IntroSection = () => {
 
         {/* Right Box */}
         <div className="bg-white flex flex-col justify-center items-center px-8 md:px-10 py-8 w-full md:w-1/2 text-center">
-          <img src={ram1} alt="Ram" className="h-40 mb-6" />
+          <img src="/images/join us/ram1.png" alt="Ram" className="h-40 mb-6" />
           <p className="text-gray-600 text-sm md:text-base">
             Hello, he is Ram, a college student. He sees some social problems
             around locality. Instead of blaming governments he wants to take
