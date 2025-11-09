@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { MapContainer, TileLayer, Marker } from "react-leaflet";
 import { centers } from "../data/centersData";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
@@ -111,7 +111,7 @@ const Centers = () => {
                   zoom={4.5} 
                   scrollWheelZoom={true} 
                   style={{ height: "100%", width: "100%" }}
-                  maxBounds={indiaBounds}
+                  
                   maxBoundsViscosity={1.0}
                   minZoom={4}
                   maxZoom={10}
@@ -133,7 +133,7 @@ const Centers = () => {
                   ))}
                 </MapContainer>
                 
-                {/* External Popup */}
+                {/* Info Box at Top Left */}
                 {activeCenter && (
                   <div className="absolute top-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border-l-4 border-[rgb(230,197,37)]">
                     <div className="flex justify-between items-start mb-2">
