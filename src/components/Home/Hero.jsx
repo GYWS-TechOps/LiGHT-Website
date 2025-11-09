@@ -30,7 +30,7 @@ const Hero = () => {
       setCurrentSlide((prev) => (prev + 1) % heroSections.length);
     }, 7000);
     return () => clearInterval(timer);
-  }, []);
+  }, [heroSections.length]);
 
   // Reset animation when slide changes
   useEffect(() => {

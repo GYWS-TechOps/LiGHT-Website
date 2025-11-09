@@ -52,7 +52,6 @@ const indiaBounds = [
 
 const Centers = () => {
   const [activeCenter, setActiveCenter] = useState(null);
-  const [hoveredCenter, setHoveredCenter] = useState(null);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -161,9 +160,9 @@ const Centers = () => {
             <div className="bg-white rounded-lg shadow-md p-6 sticky top-6 h-[500px] md:h-[600px] overflow-y-auto">
               <div className="mb-6">
                 <h2 className="text-2xl font-bold text-gray-900">{activeCenter && activeCenter.name === 'Kharagpur' ? 'Headquarter Details' : 'Center Details'}</h2>
-                {hoveredCenter && !activeCenter && (
+                {activeCenter && (
                   <p className="text-sm text-[rgb(230,197,37)] font-semibold">
-                    Hovering: {hoveredCenter.name === 'Kharagpur' ? 'Headquarter' : hoveredCenter.name}
+                    {activeCenter.name === 'Kharagpur' ? 'Headquarter' : activeCenter.name}
                   </p>
                 )}
               </div>
