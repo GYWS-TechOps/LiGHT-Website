@@ -3,16 +3,32 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { eventsData } from "../data/eventsData";
 import ToTopButton from "../components/ToTopButton";
 
+/**
+ * Initiatives Page Component
+ * 
+ * Displays LiGHT's initiatives in three main sections:
+ * 1. Featured Events - Showcases major events and their impact
+ * 2. Awards - Recognition received by different LiGHT centers
+ * 3. Samavesh - Annual meet photos and information
+ * 
+ * Features horizontal scrolling with touch/swipe support for mobile devices
+ * and navigation buttons for desktop users.
+ */
 function Initiatives() {
-  const sc = useRef();
-  const awardRef = useRef();
-  const samaRef = useRef();
+  // Refs for controlling scroll behavior of different sections
+  const sc = useRef(); // Featured Events scroll container
+  const awardRef = useRef(); // Awards section scroll container
+  const samaRef = useRef(); // Samavesh section scroll container
 
-  // Touch swipe state
+  // Touch swipe state for mobile gesture handling
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
-  // Scroll by one card width on mobile, smooth scroll on desktop
+  /**
+   * Scroll function with responsive behavior
+   * @param {React.RefObject} ref - Reference to the scroll container
+   * @param {string} d - Direction: "l" for left, "r" for right
+   */
   const scroll = (ref, d) => {
     if (!ref.current) return;
     
@@ -20,13 +36,13 @@ function Initiatives() {
     const isMobile = window.innerWidth < 768;
     
     if (isMobile) {
-      // On mobile: scroll by one card width
+      // On mobile: scroll by one card width for precise navigation
       const cardWidth = ref.current.querySelector('.card-item')?.offsetWidth || 0;
       const gap = 20; // gap-5 = 20px
       const scrollAmount = cardWidth + gap;
       ref.current.scrollBy({ left: d === "l" ? -scrollAmount : scrollAmount, behavior: "smooth" });
     } else {
-      // On desktop: scroll by viewport width (smoother)
+      // On desktop: scroll by viewport width (smoother experience)
       const amt = ref.current.clientWidth;
       ref.current.scrollBy({ left: d === "l" ? -amt : amt, behavior: "smooth" });
     }
