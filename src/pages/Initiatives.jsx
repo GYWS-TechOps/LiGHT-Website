@@ -69,21 +69,21 @@ function Initiatives() {
 
 
   const awards = [
-    { id: 1, img: "/initiativeimages/5. Innovative Centre _ LiGHT Samvedna.png", title: "Most Innovative event" },
-    { id: 2, img: "/initiativeimages/1. Impactful_ LiGHT Samvedna.png", title: "Most Impactful Centre" },
-    { id: 3, img: "/initiativeimages/4. Emerging Centre _ LiGHT Akola.png", title: "Emerging Centre of the Year" },
-    { id: 4, img: "/initiativeimages/3. Most Events Conducted_ LiGHT Wardha.png", title: "Most Events Conducted" },
-    { id: 5, img: "/initiativeimages/6. Promising Centres.png", title: "Most Promising Centre" },
+    { id: 1, img: "/images/events/awards/5. Innovative Centre _ LiGHT Samvedna.png", title: "Most Innovative event" },
+    { id: 2, img: "/images/events/awards/1. Impactful_ LiGHT Samvedna.png", title: "Most Impactful Centre" },
+    { id: 3, img: "/images/events/awards/4. Emerging Centre _ LiGHT Akola.png", title: "Emerging Centre of the Year" },
+    { id: 4, img: "/images/events/awards/3. Most Events Conducted_ LiGHT Wardha.png", title: "Most Events Conducted" },
+    { id: 5, img: "/images/events/awards/6. Promising Centres.png", title: "Most Promising Centre" },
   ];
 
   const samavesh = [
-    { id: 1, img: "/initiativeimages/samavesh0.jpg", title: "Annual Meet 2022" },
-    { id: 2, img: "/initiativeimages/samavesh1.jpg", title: "Annual Meet 2022" },
-    { id: 3, img: "/initiativeimages/samavesh2.jpg", title: "Annual Meet 2022" },
-    { id: 4, img: "/initiativeimages/samavesh3.jpg", title: "Annual Meet 2022" },
-    { id: 5, img: "/initiativeimages/samavesh4.jpg", title: "Annual Meet 2022" },
-    { id: 6, img: "/initiativeimages/samavesh5.jpg", title: "Annual Meet 2022" },
-    { id: 7, img: "/initiativeimages/samavesh6.jpg", title: "Annual Meet 2022" },
+    { id: 1, img: "/images/events/samavesh/samavesh0.jpg", title: "Annual Meet 2022" },
+    { id: 2, img: "/images/events/samavesh/samavesh1.jpg", title: "Annual Meet 2022" },
+    { id: 3, img: "/images/events/samavesh/samavesh2.jpg", title: "Annual Meet 2022" },
+    { id: 4, img: "/images/events/samavesh/samavesh3.jpg", title: "Annual Meet 2022" },
+    { id: 5, img: "/images/events/samavesh/samavesh4.jpg", title: "Annual Meet 2022" },
+    { id: 6, img: "/images/events/samavesh/samavesh5.jpg", title: "Annual Meet 2022" },
+    { id: 7, img: "/images/events/samavesh/samavesh6.jpg", title: "Annual Meet 2022" },
   ];
 
   return (

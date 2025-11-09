@@ -6,7 +6,7 @@ const Hero = () => {
 
   const heroSections = [
     {
-      backgroundImage: '/assets/Home/home-hero.jpg',
+      backgroundImage: '/images/hero/home-hero.jpg',
       text: 'Bring LiGHT to your Campus',
       description:
         'Apply for a LiGHT Center in your college and empower your college students to be a Change Maker',
@@ -14,7 +14,7 @@ const Hero = () => {
       buttonLink: '/join',
     },
     {
-      backgroundImage: '/assets/Home/hero2.jpg',
+      backgroundImage: '/images/hero/hero2.jpg',
       textLine1: 'Together we',
       textLine2: 'can make a difference',
       description:

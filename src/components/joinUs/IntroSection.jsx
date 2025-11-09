@@ -20,7 +20,7 @@ const IntroSection = () => {
         {/* Left side: Cover image with dark background */}
         <div className="w-full md:w-1/2 flex items-center justify-center bg-black p-6">
           <img
-            src="/assets/misc/cover.jpg"
+src="/images/media/images.jpeg"
             alt="Cover"
             className="h-64 md:h-70 w-56 md:w-60 object-cover"
           />
@@ -30,7 +30,7 @@ const IntroSection = () => {
         <div className="bg-white flex flex-col justify-center items-center px-8 md:px-10 py-8 w-full md:w-1/2 text-center">
           {/* Character avatar */}
           <img 
-            src="/assets/icons/ram1.png" 
+            src="/images/icons/ram1.png" 
             alt="Ram - College Student Character" 
             className="h-40 mb-6" 
           />

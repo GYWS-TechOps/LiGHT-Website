@@ -17,7 +17,7 @@ const Footer = () => {
                 {/* About Section */}
                 <div>
                     <img
-                        src="/assets/misc/Logo.jpg"
+src="/images/logos/logo.png"
                         alt="Logo"
                         className="w-14 h-14 mb-4 rounded-full"
                     />

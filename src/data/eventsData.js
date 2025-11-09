@@ -1,8 +1,7 @@
-
 export const eventsData = [
   {
     id: 1,
-    image: '/assets/Home/event1.jpg',
+    image: '/images/events/initiatives/event1.jpg',
     title: 'LiGHT Akola Event',
     metrics: [
       { 
@@ -20,7 +19,7 @@ export const eventsData = [
   
   {
     id: 2,
-    image: '/assets/Home/event3.jpg',
+    image: '/images/events/initiatives/event3.jpg',
     title: 'RISE Workshop',
     metrics: [
       { 
@@ -37,7 +36,7 @@ export const eventsData = [
   },
   {
     id: 4,
-    image: '/assets/Home/event1.jpg',
+    image: '/images/events/initiatives/event1.jpg',
     title: 'Career Counseling Program',
     metrics: [
       { 

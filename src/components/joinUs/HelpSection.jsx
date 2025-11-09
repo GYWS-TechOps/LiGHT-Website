@@ -27,19 +27,19 @@ const HelpSection = () => {
         
         {/* Platform Help Card */}
         <HelpCard 
-          img="/assets/icons/platform.png" 
+          img="/images/icons/platform.png" 
           text="1. By providing him a Platform where he can work with like-minded individuals." 
         />
         
         {/* Leadership Help Card */}
         <HelpCard 
-          img="/assets/icons/leader.png" 
+          img="/images/icons/leader.png" 
           text="2. By Bringing out the leader in him." 
         />
         
         {/* Team Building Help Card */}
         <HelpCard 
-          img="/assets/icons/team.png" 
+          img="/images/icons/team.png" 
           text="3. To form a team and develop Team - bonding among his college mates." 
         />
       </div>

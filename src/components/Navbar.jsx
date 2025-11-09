@@ -20,7 +20,7 @@ const Navbar = () => {
           
           {/* Logo and Brand Name */}
           <div className="flex-shrink-0 flex items-center space-x-2">
-            <img src="/assets/Home/logo.png" alt="LiGHT Logo" className="h-13 w-auto" />
+            <img src="/images/logos/logo.png" alt="LiGHT Logo" className="h-13 w-auto" />
             <Link to="/" className="text-2xl font-bold hidden sm:block hover:text-[rgb(230,197,37)] transition-colors duration-300">
               LiGHT
             </Link>
