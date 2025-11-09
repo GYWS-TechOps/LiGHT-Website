@@ -1,24 +1,22 @@
 import React from "react";
-import cover from "../../assets/cover.jpg";
-import ram1 from "../../assets/ram1.png";
 
 const IntroSection = () => {
   return (
-    <div className="flex justify-center items-center h-120 bg-gray-700">
-      <div className="flex rounded-2xl overflow-hidden shadow-lg max-w-2xl w-150 h-90">
+    <div className="flex justify-center items-center min-h-screen bg-gray-700 p-4">
+      <div className="flex flex-col md:flex-row rounded-2xl overflow-hidden shadow-lg max-w-2xl w-full">
         {/* Left Box with Cover Image */}
-        <div className="w-1/2 flex items-center justify-center bg-black">
+        <div className="w-full md:w-1/2 flex items-center justify-center bg-black p-6">
           <img
-            src={cover}
+            src="/assets/misc/cover.jpg"
             alt="Cover"
-            className="h-70 w-60 object-cover scale-120"
+            className="h-64 md:h-70 w-56 md:w-60 object-cover"
           />
         </div>
 
         {/* Right Box */}
-        <div className="bg-white flex flex-col justify-center items-center px-10 py-8 w-1/2 text-center">
-          <img src={ram1} alt="Ram" className="h-40 mb-6" />
-          <p className="text-gray-600">
+        <div className="bg-white flex flex-col justify-center items-center px-8 md:px-10 py-8 w-full md:w-1/2 text-center">
+          <img src="/assets/icons/ram1.png" alt="Ram" className="h-40 mb-6" />
+          <p className="text-gray-600 text-sm md:text-base">
             Hello, he is Ram, a college student. He sees some social problems
             around locality. Instead of blaming governments he wants to take
             control and do something for society.

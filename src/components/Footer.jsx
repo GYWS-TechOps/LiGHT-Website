@@ -1,13 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Facebook from '../assets/Facebook.svg';
-import Insta from '../assets/Insta.svg';
-import LinkedIn from '../assets/LinkedIn.svg';
-import Twitter from '../assets/Twitter.svg';
-import Logo from '../assets/Logo.jpg';
+import React, { useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 
 const Footer = () => {
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location]);
+
     return (
         <footer className="bg-[#1a1a1a] text-gray-300">
             {/* Main footer */}
@@ -16,7 +17,7 @@ const Footer = () => {
                 {/* About Section */}
                 <div>
                     <img
-                        src={Logo}
+                        src="/assets/misc/Logo.jpg"
                         alt="Logo"
                         className="w-14 h-14 mb-4 rounded-full"
                     />
@@ -26,49 +27,54 @@ const Footer = () => {
                         at the overall socio-economic development of the underprivileged near the IIT Kharagpur campus.
                     </p>
                     <div className="flex gap-4 mt-4">
-                        <a href="https://www.facebook.com/gyws.iitkgp" className="text-yellow-400 hover:text-white">
+                        <a href="https://www.facebook.com/share/1Bgmum4QXv/" target="_blank" rel="noreferrer" className="text-yellow-400 hover:text-white">
                             <FaFacebookF className="text-base" />
                         </a>
-                        <a href="https://x.com/gopali_youth" className="text-yellow-400 hover:text-white">
-                            <FaTwitter className="text-base" />
-                        </a>
-                        <a href="https://www.linkedin.com/company/gopali-youth-welfare-society/posts/?feedView=all" className="text-yellow-400 hover:text-white">
-                            <FaLinkedinIn className="text-base" />
-                        </a>
-                        <a href="https://www.instagram.com/gyws_ngo.iitkgp/" className="text-yellow-400 hover:text-white">
+                        <a href="https://www.instagram.com/light_gyws?igsh=MWNsdGV0bzVnZXlkOQ==" target="_blank" rel="noreferrer" className="text-yellow-400 hover:text-white">
                             <FaInstagram className="text-base" />
                         </a>
-                        <a href="https://api.whatsapp.com/send?phone=918957557713&text=Hi" className="text-yellow-400 hover:text-white">
+                        <a href="https://www.linkedin.com/showcase/light-gyws/" target="_blank" rel="noreferrer" className="text-yellow-400 hover:text-white">
+                            <FaLinkedinIn className="text-base" />
+                        </a>
+                        <a href="https://x.com/gopali_youth" target="_blank" rel="noreferrer" className="text-yellow-400 hover:text-white">
+                            <FaTwitter className="text-base" />
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=919414729199&text=Hi" target="_blank" rel="noreferrer" className="text-yellow-400 hover:text-white">
                             <FaWhatsapp className="text-base" />
                         </a>
                     </div>
                 </div>
+
+                {/* Useful Links */}
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Useful Links</h3>
                     <ul className="space-y-2 text-sm">
-                        <li><a href="#" className="hover:text-yellow-400">Home</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">About Us</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Initiatives</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Media</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Members</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Gallery</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">Contact Us</a></li>
+                        <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
+                        <li><Link to="/about" className="hover:text-yellow-400">About Us</Link></li>
+                        <li><Link to="/initiatives" className="hover:text-yellow-400">Initiatives</Link></li>
+                        <li><Link to="/mediacoverage" className="hover:text-yellow-400">Media</Link></li>
+                        <li><Link to="/members" className="hover:text-yellow-400">Members</Link></li>
+                        <li><Link to="/gallery" className="hover:text-yellow-400">Gallery</Link></li>
+                        <li><Link to="/contact" className="hover:text-yellow-400">Contact Us</Link></li>
+                        <li><Link to="/join" className="hover:text-yellow-400">Join Us</Link></li>
                     </ul>
                 </div>
+
+                {/* Contact Section */}
                 <div>
                     <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
                     <ul className="space-y-3 text-sm">
                         <li className="flex items-center gap-2">
-                            <FaEnvelope className="text-yellow-400" /> gywsociety@gmail.com
+                            <FaEnvelope className="text-yellow-400" /> light@gyws.org
                         </li>
                         <li className="flex items-center gap-2">
-                            <FaPhone className="text-yellow-400" /> +91 897557713
+                            <FaPhone className="text-yellow-400" /> +91 94147 29199
                         </li>
                         <li className="flex items-start gap-2">
                             <FaMapMarkerAlt className="text-yellow-400 mt-1" />
                             <span>
-                                Gopali (No-shooting Area), P.O.: Salua, Dist.: Paschim Medinipur,
-                                West Bengal, 721145
+                                Jagriti Vidya Mandir, Hostel Vill. Tangasole,
+                                P.O- Salua, P.S- Kharagpur (Local), Dist- Paschim Medinipur, Kharagpur, West-Bengal, Pin- 721145
                             </span>
                         </li>
                     </ul>
@@ -78,16 +84,14 @@ const Footer = () => {
             {/* Bottom bar */}
             <div className="border-t border-gray-700 py-4 px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
                 <p>
-                    Copyright © {new Date().getFullYear()} GYWS. All rights reserved | Developed by Maggyan Solutions Pvt. Ltd.{" "}
-                    
+                    Copyright © {new Date().getFullYear()} GYWS. All rights reserved | Developed by Maggyan Solutions Pvt. Ltd.
                 </p>
                 <div className="flex gap-6 mt-2 md:mt-0">
-                    <a href="#" className="hover:text-yellow-400">Privacy Policy</a>
-                    <a href="#" className="hover:text-yellow-400">Terms & Conditions</a>
+                    <Link to="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</Link>
+                    <Link to="/terms" className="hover:text-yellow-400">Terms & Conditions</Link>
                 </div>
             </div>
         </footer>
-
     );
 };
 

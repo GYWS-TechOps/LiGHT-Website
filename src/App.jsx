@@ -4,13 +4,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 import Home from "./pages/Home";
-import Aboutus from "./pages/Aboutus";
+import AboutUs from "./pages/AboutUs";
 import Centers from "./pages/Centers";
-import Contactus from "./pages/Contactus";
+import ContactUs from "./pages/ContactUs";
 import Initiatives from "./pages/Initiatives";
 import JoinUs from "./pages/JoinUs";
 import Members from "./pages/Members";
-import Mediacoverage from "./pages/Mediacoverage"; // <-- import here
+import Mediacoverage from "./pages/Mediacoverage";
+import Gallery from "./pages/Gallery";
 import Footer from "./components/Footer";
 
 const App = () => {
@@ -20,13 +21,14 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Aboutus />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/centers" element={<Centers />} />
-          <Route path="/contact" element={<Contactus />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/join" element={<JoinUs />} />
           <Route path="/members" element={<Members />} />
-          <Route path="/mediacoverage" element={<Mediacoverage />} /> {/* <-- add this */}
+          <Route path="/mediacoverage" element={<Mediacoverage />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </div>
       <Footer/>

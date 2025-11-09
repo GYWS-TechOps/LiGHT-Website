@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import bgImage from "../components/Contactus/images.jpeg";
 
-const Contactus = () => {
+const ContactUs = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -10,7 +9,7 @@ const Contactus = () => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   setLoading(true);
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbwTaGKvbNmaFeGKYeYbB9oDhyWshZd9K72waqiNKzscjRfD9JCqmg2MrwMRN2dpmUHCDQ/exec';
+  const scriptURL = import.meta.env.VITE_SCRIPT_URL;
 
   try {
     const response = await fetch(scriptURL, {
@@ -39,10 +38,8 @@ const handleSubmit = async (e) => {
     <div>
       {/* Banner Section */}
       <div
-        className="relative bg-cover bg-center h-64 flex flex-col justify-center items-start px-12 text-white"
-  style={{
-    backgroundImage: `url(${bgImage})`,
-  }}
+        className="relative bg-cover bg-center h-64 flex flex-col justify-center items-start px-12 text-white bg-gray-800"
+
       >
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         <div className="relative z-10">
@@ -64,30 +61,30 @@ const handleSubmit = async (e) => {
       </div>
 
       {/* Contact Form Card */}
-      <div className="flex justify-between p-8 bg-amber-50 rounded-xl shadow-md max-w-5xl mx-auto mt-8">
+      <div className="flex flex-col lg:flex-row justify-between p-8 bg-amber-50 rounded-xl shadow-md max-w-5xl mx-auto my-8">
         {/* Left Side - Get in Touch */}
-        <div className="w-1/2 pr-6">
+        <div className="w-full lg:w-1/2 lg:pr-6 mb-6 lg:mb-0">
           <h2 className="text-lg font-bold mb-4">GET IN TOUCH</h2>
           <p className="text-gray-600 mb-2">
-            Gopali (No-shooting Area), P.O. - Salua, Dist. - Paschim Medinipur,
-            West Bengal, Pin-721145.
+            Jagriti Vidya Mandir, Hostel Vill. Tangasole,
+             P.O- Salua, P.S- Kharagpur (Local), Dist- Paschim Medinipur, Kharagpur, West-Bengal, Pin- 721145
           </p>
-          <p className="text-gray-600 mb-2">📞 +91 9123192841 </p>
-          <p className="text-gray-600">✉️ gywsociety@gmail.com</p>
+          <p className="text-gray-600 mb-2">📞 +91 9414729199 </p>
+          <p className="text-gray-600">✉️ light@gyws.org</p>
         </div>
 
         {/* Right Side - Query Form */}
-        <div className="w-1/2 pl-6">
+        <div className="w-full lg:w-1/2 lg:pl-6">
           <h2 className="text-lg font-bold mb-4">QUERY HERE</h2>
           <form className="space-y-4" onSubmit={handleSubmit}>
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <input
                 type="text"
                 placeholder="Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
               <input
                 type="email"
@@ -95,7 +92,7 @@ const handleSubmit = async (e) => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                className="w-full sm:w-1/2 p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
               />
             </div>
             <textarea
@@ -106,15 +103,17 @@ const handleSubmit = async (e) => {
               required
               className="w-full p-3 border border-gray-300 rounded-lg h-28 focus:outline-none focus:ring-2 focus:ring-yellow-400"
             ></textarea>
-            <button
-              type="submit"
-              disabled={loading}
-              className={`bg-yellow-400 text-white px-6 py-3 rounded-lg hover:bg-yellow-500 transition ${
-                loading && "opacity-70 cursor-not-allowed"
-              }`}
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
+            <div className="flex justify-center lg:justify-start">
+              <button
+                type="submit"
+                disabled={loading}
+                className={`bg-[rgb(240,210,55)] hover:bg-[rgb(200,167,20)] text-black px-6 py-3 rounded-lg transition ${
+                  loading && "opacity-70 cursor-not-allowed"
+                }`}
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+            </div>
           </form>
         </div>
       </div>
@@ -122,4 +121,4 @@ const handleSubmit = async (e) => {
   );
 };
 
-export default Contactus;
+export default ContactUs;

@@ -4,7 +4,7 @@ import Mission from '../components/Home/Mission'
 import Reach from '../components/Home/Reach'
 import Events from '../components/Home/Events' 
 import Media from '../components/Home/Media'
-import ToTopButton from '../components/Home/ToTopButton'
+import ToTopButton from '../components/ToTopButton'
 
 
 const Home = () => {

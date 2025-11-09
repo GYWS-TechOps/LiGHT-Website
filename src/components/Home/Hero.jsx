@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import heroImg1 from '../../assets/Home/home-hero.jpg';
-import heroImg2 from '../../assets/Home/hero2.jpg';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,7 +6,7 @@ const Hero = () => {
 
   const heroSections = [
     {
-      backgroundImage: heroImg1,
+      backgroundImage: '/assets/Home/home-hero.jpg',
       text: 'Bring LiGHT to your Campus',
       description:
         'Apply for a LiGHT Center in your college and empower your college students to be a Change Maker',
@@ -16,7 +14,7 @@ const Hero = () => {
       buttonLink: '/join',
     },
     {
-      backgroundImage: heroImg2,
+      backgroundImage: '/assets/Home/hero2.jpg',
       textLine1: 'Together we',
       textLine2: 'can make a difference',
       description:
@@ -113,7 +111,7 @@ const Hero = () => {
                 </h2>
 
                 {/* Description */}
-                <div className="text-xl text-orange-100 pb-3 max-w-4xl mx-auto">
+                <div className="text-xl text-orange-100 pb-3 max-w-4xl mx-auto px-2">
                   {section.description}
                 </div>
 
@@ -152,18 +150,7 @@ const Hero = () => {
         &#8250;
       </button>
 
-      {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
-        {heroSections.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300
-              ${currentSlide === index ? 'bg-[rgb(230,197,37)] scale-110' : 'bg-white bg-opacity-50'}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      
     </div>
   );
 };

@@ -19,7 +19,7 @@ const ToTopButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-5 right-5 w-12 h-12 bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)]  rounded-full text-white font-bold text-lg shadow-lg transition-all duration-300 ${
+      className={`fixed bottom-5 right-5 w-12 h-12 bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] z-50  rounded-full text-white font-bold text-lg shadow-lg transition-all duration-300 ${
         show ? 'opacity-100' : 'opacity-0 pointer-events-none'
       }`}
     >

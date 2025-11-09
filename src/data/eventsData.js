@@ -1,11 +1,8 @@
-import event1 from '../assets/Home/event1.jpg';
-import event2 from '../assets/Home/event2.jpg';
-import event3 from '../assets/Home/event3.jpg';
 
 export const eventsData = [
   {
     id: 1,
-    image: event1,
+    image: '/assets/Home/event1.jpg',
     title: 'LiGHT Akola Event',
     metrics: [
       { 
@@ -23,7 +20,7 @@ export const eventsData = [
   
   {
     id: 2,
-    image: event3,
+    image: '/assets/Home/event3.jpg',
     title: 'RISE Workshop',
     metrics: [
       { 
@@ -40,7 +37,7 @@ export const eventsData = [
   },
   {
     id: 4,
-    image: event1,
+    image: '/assets/Home/event1.jpg',
     title: 'Career Counseling Program',
     metrics: [
       { 
