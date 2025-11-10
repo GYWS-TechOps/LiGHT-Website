@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -117,13 +118,25 @@ const Hero = () => {
 
                 {/* Button */}
                 <div>
-                  <a
-                    href={section.buttonLink}
-                    className="inline-block px-2 py-1 text-lg text-white bg-[rgb(230,197,37)]
-                               hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
-                  >
-                    {section.buttonText}
-                  </a>
+                  {section.buttonLink.startsWith('http') ? (
+                    <a
+                      href={section.buttonLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-2 py-1 text-lg text-white bg-[rgb(230,197,37)]
+                                 hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
+                    >
+                      {section.buttonText}
+                    </a>
+                  ) : (
+                    <Link
+                      to={section.buttonLink}
+                      className="inline-block px-2 py-1 text-lg text-white bg-[rgb(230,197,37)]
+                                 hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
+                    >
+                      {section.buttonText}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
