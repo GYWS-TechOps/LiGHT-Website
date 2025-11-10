@@ -111,7 +111,7 @@ const Centers = () => {
                   zoom={4.5} 
                   scrollWheelZoom={true} 
                   style={{ height: "100%", width: "100%" }}
-                  
+                  maxBounds={indiaBounds}
                   maxBoundsViscosity={1.0}
                   minZoom={4}
                   maxZoom={10}

@@ -1,18 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 
-import Home from "./pages/Home";
-import AboutUs from "./pages/AboutUs";
-import Centers from "./pages/Centers";
-import ContactUs from "./pages/ContactUs";
-import Initiatives from "./pages/Initiatives";
-import JoinUs from "./pages/JoinUs";
-import Members from "./pages/Members";
-import MediaCoverage from "./pages/MediaCoverage";
-import Gallery from "./pages/Gallery";
-import Footer from "./components/Footer";
+import Home from "./pages/Home.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import Centers from "./pages/Centers.jsx";
+import ContactUs from "./pages/ContactUs.jsx";
+import Initiatives from "./pages/Initiatives.jsx";
+import JoinUs from "./pages/JoinUs.jsx";
+import Members from "./pages/Members.jsx";
+import MediaCoverage from "./pages/MediaCoverage.jsx";
+import Gallery from "./pages/Gallery.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
