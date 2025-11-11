@@ -8,14 +8,14 @@ const WhoCanJoin = () => {
       <div className="h-1 w-12 bg-yellow-400 mx-auto mb-10"></div>
 
       <div className="flex justify-center mb-12">
-        <img src="/images/join us/joinIcon.png" alt="Join Icon" className="h-60 w-60" />
+        <img src="/images/join us/joinIcon.webp" alt="Join Icon" className="h-60 w-60" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         <div className="flex justify-center">
           <div className="w-72">
             <JoinCard
-              img="/images/join us/socialWorker.png"
+              img="/images/join us/socialWorker.webp"
               title="Social Worker"
               text="We always believe that building a forest is much better than building a tree, and so the social workers."
             />
@@ -24,7 +24,7 @@ const WhoCanJoin = () => {
         <div className="flex justify-center">
           <div className="w-72">
             <JoinCard
-              img="/images/join us/student.png"
+              img="/images/join us/student.webp"
               title="College Student"
               text="College Students like Ram, who instead of blaming governments want..."
             />
@@ -33,7 +33,7 @@ const WhoCanJoin = () => {
         <div className="flex justify-center">
           <div className="w-72">
             <JoinCard
-              img="/images/join us/professor.png"
+              img="/images/join us/professor.webp"
               title="College Professor"
               text="If you are a College Professor who thinks that your students should get opportunity..."
             />

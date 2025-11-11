@@ -17,7 +17,7 @@ const Footer = () => {
                 {/* About Section */}
                 <div>
                     <img
-                        src="/images/logos/Logo.jpg"
+                        src="/images/logos/Logo.webp"
                         alt="Logo"
                         className="w-14 h-14 mb-4 rounded-full"
                     />

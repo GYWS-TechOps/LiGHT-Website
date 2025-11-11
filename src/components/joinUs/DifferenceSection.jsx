@@ -17,7 +17,7 @@ const DifferenceSection = () => {
           {/* Left: single image (contains all 4 diamonds) */}
           <div className="flex justify-center md:justify-start">
               <img
-                src="/images/join us/diamond.png"
+                src="/images/join us/diamond.webp"
                 alt="Difference icons"
                 className="w-48 h-48"
               />
