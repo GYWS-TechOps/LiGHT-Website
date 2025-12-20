@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ProgressiveImage from "./ProgressiveImage";
 import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
           
           {/* Logo and Brand Name */}
           <div className="flex-shrink-0 flex items-center space-x-2">
-            <img src="/images/Home/logo.webp" alt="LiGHT Logo" className="h-13 w-auto" />
+            <ProgressiveImage src="/images/Home/logo.webp" alt="LiGHT Logo" className="h-13 w-auto" />
             <Link to="/" className="text-2xl font-bold hidden sm:block hover:text-[rgb(230,197,37)] transition-colors duration-300">
               LiGHT
             </Link>

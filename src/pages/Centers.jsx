@@ -73,7 +73,7 @@ const Centers = () => {
             <div className="flex-1">
               <div className="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3 gap-4">
                 <div className="bg-gray-700 rounded-lg p-5 hover:bg-gray-600 transition-colors duration-300 text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-[rgb(230,197,37)] mb-2">{centers.length}</div>
+                  <div className="text-4xl md:text-5xl font-bold text-[rgb(230,197,37)] mb-2">{centers.length-1}</div>
                   <div className="text-sm text-gray-300 uppercase tracking-wider">Centers</div>
                 </div>
                 <div className="bg-gray-700 rounded-lg p-5 hover:bg-gray-600 transition-colors duration-300 text-center">
@@ -134,8 +134,8 @@ const Centers = () => {
                 </MapContainer>
                 
                 {/* Info Box at Top Left */}
-                {activeCenter && (
-                  <div className="absolute top-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-50 border-l-4 border-[rgb(230,197,37)]">
+                  {activeCenter && (
+                    <div className="absolute top-4 left-4 bg-white rounded-lg shadow-lg p-4 max-w-sm z-30 border-l-4 border-[rgb(230,197,37)]">
                     <div className="flex justify-between items-start mb-2">
                       <h3 className="font-bold text-lg text-gray-900">
                         {activeCenter.name}

@@ -5,7 +5,7 @@ import { centers } from '../../data/centersData';
 const Reach = () => {
   // Calculate number of unique states
   const numberOfStates = [...new Set(centers.map(c => c.state))].length;
-  const numberOfCenters = centers.length;
+  const numberOfCenters = centers.length-1;
   
   return (
     <section className='py-16 px-6 bg-gray-900 text-white relative mt-4'>

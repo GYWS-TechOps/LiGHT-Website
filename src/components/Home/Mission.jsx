@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressiveImage from '../ProgressiveImage';
 
 const Mission = () => {
   return (
@@ -9,7 +10,7 @@ const Mission = () => {
           {/* Our Mission */}
           <div className='text-center px-8 py-12 md:py-8'>
             <div className='mb-6'>
-              <img src="/images/Home/mission.webp" alt="Our Mission" className='w-16 h-16 mx-auto object-contain' />
+              <ProgressiveImage src="/images/Home/mission.webp" alt="Our Mission" className='mx-auto object-contain' style={{maxWidth: '4rem', maxHeight: '4rem', width: '100%', height: 'auto'}} />
             </div>
             <h3 className='text-2xl font-bold text-gray-800 mb-4'>Our Mission</h3>
             <p className='text-gray-600 leading-relaxed text-justify'>
@@ -22,7 +23,7 @@ const Mission = () => {
           {/* Our Plan */}
           <div className='text-center px-8 md:py-8 max-w-[80vw]'>
             <div className='mb-6'>
-              <img src="/images/Home/plan.webp" alt="Our Plan" className='w-16 h-16 mx-auto object-contain' />
+              <ProgressiveImage src="/images/Home/plan.webp" alt="Our Plan" className='w-16 h-16 mx-auto object-contain' />
             </div>
             <h3 className='text-2xl font-bold text-gray-800 mb-4'>Our Plan</h3>
             <p className='text-gray-600 leading-relaxed text-justify'>
@@ -35,7 +36,7 @@ const Mission = () => {
           {/* Our Vision */}
           <div className='text-center px-8 py-12 md:py-8'>
             <div className='mb-6'>
-              <img src="/images/Home/vision.webp" alt="Our Vision" className='w-16 h-16 mx-auto object-contain' />
+              <ProgressiveImage src="/images/Home/vision.webp" alt="Our Vision" className='w-16 h-16 mx-auto object-contain' />
             </div>
             <h3 className='text-2xl font-bold text-gray-800 mb-4'>Our Vision</h3>
             <p className='text-gray-600 leading-relaxed text-justify'>

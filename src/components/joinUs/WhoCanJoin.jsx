@@ -1,4 +1,5 @@
 import React from "react";
+import ProgressiveImage from "../ProgressiveImage";
 import JoinCard from "./JoinCard";
 
 const WhoCanJoin = () => {
@@ -8,7 +9,7 @@ const WhoCanJoin = () => {
       <div className="h-1 w-12 bg-yellow-400 mx-auto mb-10"></div>
 
       <div className="flex justify-center mb-12">
-        <img src="/images/join us/joinIcon.webp" alt="Join Icon" className="h-60 w-60" />
+        <ProgressiveImage src="/images/join us/joinIcon.webp" alt="Join Icon" className="h-60 w-60" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">

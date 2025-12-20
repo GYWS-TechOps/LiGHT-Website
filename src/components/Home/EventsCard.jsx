@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressiveImage from '../ProgressiveImage';
 
 const EventsCard = ({ 
   image, 
@@ -20,7 +21,7 @@ const EventsCard = ({
     `}>
       {/* Image Section - Left side on desktop */}
       <div className="w-full md:w-1/2 max-h-80 md:h-auto overflow-hidden flex-shrink-0">
-        <img 
+        <ProgressiveImage 
           src={image} 
           alt={title}
           className="w-full h-full object-cover object-center"

@@ -6,6 +6,7 @@ export const members = [
     facebook: "https://www.facebook.com/megha.singhal.35325/",
     linkedin: "https://www.linkedin.com/in/megha-singhal-7a9a3926a/"
   },
+ 
   { 
     name: "Aaradhya Shukla", 
     role: "LiGHT Head", 
@@ -14,24 +15,24 @@ export const members = [
     linkedin: "https://www.linkedin.com/in/aaradhya-shukla-205289280"
   },
   { 
-    name: "Zalavadiya Dishil", 
-    role: "LiGHT Head", 
-    image: "/images/members/Dishil.webp",
-    facebook: "#",
-    linkedin: "https://www.linkedin.com/in/dishil-zalavadiya-943020280"
-  },
-  { 
     name: "Thania Joshi", 
     role: "LiGHT Head", 
     image: "/images/members/Thania.webp",
-    facebook: "#",
+    facebook: "https://www.facebook.com/profile.php?id=100095454403516",
     linkedin: "https://www.linkedin.com/in/thania-joshi-varanasi-733161333"
   },
   { 
     name: "Vikash Siyak", 
     role: "LiGHT Head", 
     image: "/images/members/Vikash.webp",
-    facebook: "#",
+    facebook: "https://www.facebook.com/profile.php?id=61550563805245",
     linkedin: "https://www.linkedin.com/in/vikash-siyak-221697293"
+  },
+  { 
+    name: "Zalavadiya Dishil", 
+    role: "LiGHT Head", 
+    image: "/images/members/Dishil.webp",
+    facebook: "https://www.facebook.com/dishil.zalavadia.7",
+    linkedin: "https://www.linkedin.com/in/dishil-zalavadiya-943020280"
   },
 ];
