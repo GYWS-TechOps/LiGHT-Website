@@ -13,20 +13,19 @@ const handleSubmit = async (e) => {
   const scriptURL = import.meta.env.VITE_SCRIPT_URL;
 
   try {
-    const response = await fetch(scriptURL, {
+    await fetch(scriptURL, {
       method: "POST",
-      body: JSON.stringify({name, email, message}),
+      mode: "no-cors",
+      headers: {
+        "Content-Type": "text/plain;charset=utf-8",
+      },
+      body: JSON.stringify({ name, email, message }),
     });
-    const data = await response.json();
-
-    if (data.result === 'success') {
-      setNotification({ show: true, type: 'success', message: 'Message sent successfully! 🎉' });
-      setName("");
-      setEmail("");
-      setMessage("");
-    } else {
-      throw new Error(data.message || "An unknown error occurred.");
-    }
+    // In no-cors mode, we can't read the response, so always show success if no error is thrown
+    setNotification({ show: true, type: 'success', message: 'Message sent successfully! 🎉' });
+    setName("");
+    setEmail("");
+    setMessage("");
   } catch (error) {
     setNotification({ show: true, type: 'error', message: 'Error sending message. Please try again. ❌' });
     console.error("Error!", error.message);
@@ -34,8 +33,8 @@ const handleSubmit = async (e) => {
     setLoading(false);
     // Auto-hide notification after 5 seconds
     setTimeout(() => setNotification({ show: false, type: '', message: '' }), 5000);
-    }
-  };
+  }
+};
 
   return (
     <div className="relative">
