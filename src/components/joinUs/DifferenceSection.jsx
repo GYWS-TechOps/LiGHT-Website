@@ -1,5 +1,4 @@
 import React from "react";
-import diamond from "../../assets/diamond.png";
 
 const DifferenceSection = () => {
   return (
@@ -7,7 +6,7 @@ const DifferenceSection = () => {
       <div className="max-w-4xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="inline-block bg-[#E91E63] px-5 py-2 text-2xl md:text-3xl tracking-tight">
+          <h2 className="inline-block text-[#333336] bg-[rgb(230,197,37)] px-5 py-2 text-2xl md:text-3xl tracking-tight">
             Difference from other platforms
           </h2>
           <div className="w-12 h-1 bg-[#F7C631] mx-auto mt-3"></div>
@@ -18,7 +17,7 @@ const DifferenceSection = () => {
           {/* Left: single image (contains all 4 diamonds) */}
           <div className="flex justify-center md:justify-start">
               <img
-                src={diamond}
+                src="/images/join us/diamond.webp"
                 alt="Difference icons"
                 className="w-48 h-48"
               />

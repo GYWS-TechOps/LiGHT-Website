@@ -1,17 +1,18 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 
-import Home from "./pages/Home";
-import Aboutus from "./pages/Aboutus";
-import Centers from "./pages/Centers";
-import Contactus from "./pages/Contactus";
-import Initiatives from "./pages/Initiatives";
-import JoinUs from "./pages/JoinUs";
-import Members from "./pages/Members";
-import Mediacoverage from "./pages/Mediacoverage"; // <-- import here
-import Footer from "./components/Footer";
+import Home from "./pages/Home.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import Centers from "./pages/Centers.jsx";
+import ContactUs from "./pages/ContactUs.jsx";
+import Initiatives from "./pages/Initiatives.jsx";
+import JoinUs from "./pages/JoinUs.jsx";
+import Members from "./pages/Members.jsx";
+import MediaCoverage from "./pages/MediaCoverage.jsx";
+import Gallery from "./pages/Gallery.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   return (
@@ -20,13 +21,14 @@ const App = () => {
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<Aboutus />} />
+          <Route path="/about" element={<AboutUs />} />
           <Route path="/centers" element={<Centers />} />
-          <Route path="/contact" element={<Contactus />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/initiatives" element={<Initiatives />} />
           <Route path="/join" element={<JoinUs />} />
           <Route path="/members" element={<Members />} />
-          <Route path="/mediacoverage" element={<Mediacoverage />} /> {/* <-- add this */}
+          <Route path="/mediacoverage" element={<MediaCoverage />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </div>
       <Footer/>

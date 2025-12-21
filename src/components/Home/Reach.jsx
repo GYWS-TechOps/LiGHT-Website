@@ -1,7 +1,12 @@
 import React from 'react';
 import CountUp from 'react-countup';
+import { centers } from '../../data/centersData';
 
 const Reach = () => {
+  // Calculate number of unique states
+  const numberOfStates = [...new Set(centers.map(c => c.state))].length;
+  const numberOfCenters = centers.length-1;
+  
   return (
     <section className='py-16 px-6 bg-gray-900 text-white relative mt-4'>
       <div className='max-w-7xl mx-auto'>
@@ -17,7 +22,7 @@ const Reach = () => {
           {/* Centers */}
           <div className='text-center'>
             <div className='text-5xl md:text-6xl font-semibold text-[rgb(230,197,37)] mb-2'>
-              <CountUp end={11} duration={3.5} enableScrollSpy scrollSpyOnce/>
+              <CountUp end={numberOfCenters} duration={3.5} enableScrollSpy scrollSpyOnce/>
             </div>
             <div className='text-lg text-gray-300'>
               Centers
@@ -27,7 +32,7 @@ const Reach = () => {
           {/* States */}
           <div className='text-center'>
             <div className='text-5xl md:text-6xl font-semibold text-[rgb(230,197,37)] mb-2'>
-              <CountUp end={7} duration={3.5} enableScrollSpy scrollSpyOnce/>
+              <CountUp end={numberOfStates} duration={3.5} enableScrollSpy scrollSpyOnce/>
             </div>
             <div className='text-lg text-gray-300'>
               States
@@ -37,7 +42,7 @@ const Reach = () => {
           {/* Active Members */}
           <div className='text-center'>
             <div className='text-5xl md:text-6xl font-semibold text-[rgb(230,197,37)] mb-2'>
-              <CountUp end={400} duration={4} enableScrollSpy scrollSpyOnce/>
+              <CountUp end={400} duration={4} enableScrollSpy scrollSpyOnce/>+
             </div>
             <div className='text-lg text-gray-300'>
               Active Members

@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import heroImg1 from '../../assets/Home/home-hero.jpg';
-import heroImg2 from '../../assets/Home/hero2.jpg';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -8,7 +7,7 @@ const Hero = () => {
 
   const heroSections = [
     {
-      backgroundImage: heroImg1,
+      backgroundImage: '/images/Home/home-hero.webp',
       text: 'Bring LiGHT to your Campus',
       description:
         'Apply for a LiGHT Center in your college and empower your college students to be a Change Maker',
@@ -16,7 +15,7 @@ const Hero = () => {
       buttonLink: '/join',
     },
     {
-      backgroundImage: heroImg2,
+      backgroundImage: '/images/Home/hero2.webp',
       textLine1: 'Together we',
       textLine2: 'can make a difference',
       description:
@@ -32,7 +31,7 @@ const Hero = () => {
       setCurrentSlide((prev) => (prev + 1) % heroSections.length);
     }, 7000);
     return () => clearInterval(timer);
-  }, []);
+  }, [heroSections.length]);
 
   // Reset animation when slide changes
   useEffect(() => {
@@ -113,19 +112,31 @@ const Hero = () => {
                 </h2>
 
                 {/* Description */}
-                <div className="text-xl text-orange-100 pb-3 max-w-4xl mx-auto">
+                <div className="text-xl text-orange-100 pb-3 max-w-4xl mx-auto px-2">
                   {section.description}
                 </div>
 
                 {/* Button */}
                 <div>
-                  <a
-                    href={section.buttonLink}
-                    className="inline-block px-2 py-1 text-lg text-white bg-[rgb(230,197,37)]
-                               hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
-                  >
-                    {section.buttonText}
-                  </a>
+                  {section.buttonLink.startsWith('http') ? (
+                    <a
+                      href={section.buttonLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-2 py-1 text-lg text-white bg-[rgb(230,197,37)]
+                                 hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
+                    >
+                      {section.buttonText}
+                    </a>
+                  ) : (
+                    <Link
+                      to={section.buttonLink}
+                      className="inline-block px-2 py-1 text-lg text-white bg-[rgb(230,197,37)]
+                                 hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
+                    >
+                      {section.buttonText}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>
@@ -152,18 +163,7 @@ const Hero = () => {
         &#8250;
       </button>
 
-      {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3 z-20">
-        {heroSections.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300
-              ${currentSlide === index ? 'bg-[rgb(230,197,37)] scale-110' : 'bg-white bg-opacity-50'}`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
+      
     </div>
   );
 };

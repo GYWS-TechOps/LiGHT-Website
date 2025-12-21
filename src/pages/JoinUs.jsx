@@ -5,6 +5,7 @@ import WhoCanJoin from "../components/joinUs/WhoCanJoin";
 import WhyJoinRam from "../components/joinUs/WhyJoinRam";
 import DifferenceSection from "../components/joinUs/DifferenceSection";
 import IncentivesSection from "../components/joinUs/IncentivesSection";
+import ToTopButton from "../components/ToTopButton";
 
 
 
@@ -17,8 +18,7 @@ const JoinUs = () => {
       <WhyJoinRam />
       <DifferenceSection />
       <IncentivesSection />
-      
-      
+      <ToTopButton />
     </>
   );
 };

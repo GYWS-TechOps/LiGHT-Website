@@ -1,4 +1,5 @@
 import React from 'react';
+import ProgressiveImage from '../ProgressiveImage';
 
 const MediaCard = ({ 
   title, 
@@ -12,7 +13,7 @@ const MediaCard = ({
     <div className={`bg-white rounded-lg shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-300 max-w-md mx-auto overflow-hidden h-full ${className}`}>
       {/* Image Section */}
       <div className="relative">
-        <img 
+        <ProgressiveImage 
           src={image}
           alt={title}
           className="w-full h-56 object-cover"
