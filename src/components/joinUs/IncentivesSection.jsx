@@ -24,7 +24,7 @@ const Incentives = () => {
 
         {/* Content */}
         <div className="mt-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-6 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 [@media(min-width:1140px)]:grid-cols-4 gap-6 mb-6 justify-items-center">
             {incentives.slice(0, 4).map((item, index) => (
               <div
                 key={index}
@@ -35,7 +35,7 @@ const Incentives = () => {
             ))}
           </div>
 
-          <div className="flex flex-wrap justify-center gap-2">
+          <div className="flex flex-wrap justify-center gap-6">
             {incentives.slice(4).map((item, index) => (
               <div
                 key={index}

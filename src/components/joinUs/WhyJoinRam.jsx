@@ -3,7 +3,7 @@ import ReasonCard from "./ReasonCard";
 
 const WhyJoinRam = () => {
   const reasons = [
-    "1. By joining LiGHT, he will become a part of a network which is spread nationwide across 12 states. He could share and discuss his ideas on a platform consisting of more than 150 members having diverse opinions.",
+    "1. By joining LiGHT, he will become a part of a network which is spread nationwide across 7 states. He could share and discuss his ideas on a platform consisting of more than 400 members having diverse opinions.",
     "2. He will find this platform unique from other organizations because it was completely student-run, which will enable him to communicate and understand better with other student members.",
     "3. He would receive a lot of incentives such as certification, proper guidance, improving skills and personality, and most importantly an established platform for team format.",
     "4. Apart from this, he will also receive other benefits from the team such as career guidance, various resources, mentorship and various others."
