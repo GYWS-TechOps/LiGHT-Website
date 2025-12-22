@@ -89,7 +89,7 @@ const Navbar = () => {
               href="https://www.gyws.org/donate" 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="inline-block -mt-0.5 px-2 pb-1 pt-0.1 text-lg text-black bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center -mt-0.5 px-2 pb-1 pt-0.5 text-lg text-black bg-[rgb(230,197,37)] hover:bg-[rgb(200,167,20)] rounded-sm transition-all duration-300 hover:scale-105"
             >
               Donate Now
             </a>
