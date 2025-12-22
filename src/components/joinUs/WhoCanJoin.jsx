@@ -27,7 +27,7 @@ const WhoCanJoin = () => {
             <JoinCard
               img="/images/join us/student.webp"
               title="College Student"
-              text="College Students like Ram, who instead of blaming governments want..."
+              text="College Students like Ram, who instead of blaming governments want to take action and make a difference in the society."
             />
           </div>
         </div>
@@ -36,7 +36,7 @@ const WhoCanJoin = () => {
             <JoinCard
               img="/images/join us/professor.webp"
               title="College Professor"
-              text="If you are a College Professor who thinks that your students should get opportunity..."
+              text="If you are a College Professor who thinks that your students should get opportunities to engage in meaningful social work and community service."
             />
           </div>
         </div>

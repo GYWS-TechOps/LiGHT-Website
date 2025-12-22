@@ -1,13 +1,13 @@
 import React from "react";
 
 const incentives = [
-  { text: "Certificates", color: "bg-[#1A2930] text-white" },
-  { text: "NGO Work Experience", color: "bg-[#1A2930] text-white" },
-  { text: "Guidance and Mentorship", color: "bg-[#1A2930] text-white" },
-  { text: "Already established platform for team formation", color: "bg-[#1A2930] text-white" },
-  { text: "Skill Development", color: "bg-[#FFD42D] text-black" },
-  { text: "Can get a chance to visit IIT Kharagpur", color: "bg-[#FFD42D] text-black" },
-  { text: "Other Help", color: "bg-[#FFD42D] text-black" },
+  { text: "CERTIFICATES", color: "bg-[#1A2930] text-white" },
+  { text: "NGO WORK EXPERIENCE", color: "bg-[#1A2930] text-white" },
+  { text: "GUIDANCE AND MENTORSHIP", color: "bg-[#1A2930] text-white" },
+  { text: "ALREADY ESTABLISHED PLATFORM FOR TEAM FORMATION", color: "bg-[#1A2930] text-white" },
+  { text: "SKILL DEVELOPMENT", color: "bg-[#FFD42D] text-black" },
+  { text: "CAN GET A CHANCE TO VISIT IIT KHARAGPUR", color: "bg-[#FFD42D] text-black" },
+  { text: "OTHER HELP", color: "bg-[#FFD42D] text-black" },
 ];
 
 const Incentives = () => {
@@ -30,7 +30,7 @@ const Incentives = () => {
                 key={index}
                 className={`${item.color} rounded-lg shadow-md h-28 w-64 flex items-center justify-center text-center px-4 font-semibold transition-shadow duration-200 hover:shadow-xl cursor-pointer`}
               >
-                <span className="truncate w-full">{item.text}</span>
+                <span className="whitespace-normal break-words w-full">{item.text}</span>
               </div>
             ))}
           </div>
